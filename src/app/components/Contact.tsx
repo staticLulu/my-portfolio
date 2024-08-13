@@ -32,15 +32,17 @@ const Contact = () => {
           <SectionCard 
             title="Phone:" 
             icon={<MdOutlinePhoneInTalk className="w-[20px] h-[20px] text-[#C8A1E0]"/>} 
-            children={<><Typography className="font-medium">+855 896 614 712</Typography></>}
             backgroundColor="#F2F7FC" 
-          />
+          >
+            <Typography className="font-medium">+855 896 614 712</Typography>
+          </SectionCard>
           <SectionCard 
             title="Email:" 
             icon={<MdOutlineAttachEmail className="w-[20px] h-[20px] text-[#C8A1E0]"/>} 
-            children={<><Typography className="font-medium">dang.dangmakara@gmail.com</Typography></>}
             backgroundColor="#F2F7FC" 
-          />
+          >
+            <Typography className="font-medium">dang.dangmakara@gmail.com</Typography>
+          </SectionCard>
         </Box>
       </SectionComponent>
       <Box className="py-4 px-10 bg-[#F2F7FC] rounded-[12px] shadow-sm">
