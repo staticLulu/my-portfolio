@@ -4,6 +4,8 @@ import { Box, Divider, Typography } from "@mui/material";
 import MyCard from "./MyCard";
 import { IoCodeSlash } from "react-icons/io5";
 import SectionComponent from "./SectionComponent";
+import { FaFigma, FaInstagram } from "react-icons/fa";
+import { MdOutlineMonitor } from "react-icons/md";
 
 const HomeComponent = () => {
   const whatIDos = [
@@ -29,7 +31,7 @@ const HomeComponent = () => {
         lives. Let's turn ideas into reality and 
         shape the future together.
       </>,
-      icon: <IoCodeSlash className="text-[#C8A1E0] w-[22px] h-auto"/>
+      icon: <FaInstagram className="text-[#C8A1E0] w-[22px] h-auto"/>
     },
     {
       id: 3,
@@ -38,7 +40,7 @@ const HomeComponent = () => {
         interfaces that offer a delightful user 
         experience is something I'm truly fanatic 
         about.</>,
-      icon: <IoCodeSlash className="text-[#C8A1E0] w-[22px] h-auto"/>
+      icon: <FaFigma className="text-[#C8A1E0] w-[22px] h-auto"/>
     },
     {
       id: 4,
@@ -49,22 +51,20 @@ const HomeComponent = () => {
         mentor allows me to give back to the 
         community that has supported me 
         throughout my career. </>,
-      icon: <IoCodeSlash className="text-[#C8A1E0] w-[22px] h-auto"/>
+      icon: <MdOutlineMonitor className="text-[#C8A1E0] w-[22px] h-auto"/>
     }
   ];
 
   return (
     <Box className="grid gap-4">
-      <Box className="h-[220px]">
-        <SectionComponent title="ABOUT ME">
-          <Typography>
-            Hello there! I'm thrilled to welcome you to my portfolio. I am a passionate and versatile
-            full-stack developer with a keen interest in exploring the latest cutting-edge technologies.
-            My journey in the world of web development has been nothing short of exhilarating, and 
-            I constantly strive to enhance my skills and embrace emerging trends in the industry.
-          </Typography>
-        </SectionComponent>
-      </Box>
+      <SectionComponent title="ABOUT ME">
+        <Typography>
+          Hello there! I'm thrilled to welcome you to my portfolio. I am a passionate and versatile
+          full-stack developer with a keen interest in exploring the latest cutting-edge technologies.
+          My journey in the world of web development has been nothing short of exhilarating, and 
+          I constantly strive to enhance my skills and embrace emerging trends in the industry.
+        </Typography>
+      </SectionComponent>
       <Box className=" grid gap-4">
         <Typography variant="h4" className="font-bold">
           What I Do!
