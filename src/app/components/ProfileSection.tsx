@@ -48,14 +48,13 @@ const ProfileSection = () => {
         gap-4 
         px-4 
         pb-4
-        h-[700px]
+        md:h-[700px]
       " 
-      
     >
       <Box className="grid justify-center">
         <Box className="grid justify-center h-fit">
           <Image 
-            src="/images/logo.png" 
+            src="/images/profile3.jpg" 
             alt="profile" 
             width={150} 
             height={166.56} 

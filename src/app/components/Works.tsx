@@ -32,7 +32,7 @@ const WorkList = [
     id: 1,
     image: 'https://i.pinimg.com/736x/3f/51/f3/3f51f31e9ffe762d0b0a8b0c38f7c1e7.jpg',
     title: 'Hello world?',
-    category: 'Web Development'
+    category: 'App development'
   },
   {
     id: 2,
@@ -45,6 +45,18 @@ const WorkList = [
     image: 'https://i.pinimg.com/736x/3f/51/f3/3f51f31e9ffe762d0b0a8b0c38f7c1e7.jpg',
     title: 'Hello world?',
     category: 'Web Development'
+  },
+  {
+    id: 4,
+    image: 'https://i.pinimg.com/736x/3f/51/f3/3f51f31e9ffe762d0b0a8b0c38f7c1e7.jpg',
+    title: 'Hello world?',
+    category: 'Design'
+  },
+  {
+    id: 5,
+    image: 'https://i.pinimg.com/736x/3f/51/f3/3f51f31e9ffe762d0b0a8b0c38f7c1e7.jpg',
+    title: 'Hello world?',
+    category: 'Mentorship'
   }
 ];
 const Works = () => {
@@ -55,7 +67,7 @@ const Works = () => {
   };
 
   return (
-    <Box>
+    <Box id="work">
       <SectionComponent title="Portfolio">
       <Box >
         <Box className="grid justify-end">
@@ -106,38 +118,50 @@ const Works = () => {
         </CustomTabPanel>
         <CustomTabPanel value={value} index={1}>
           <Box className="grid grid-cols-2 gap-2.5">
-              {WorkList.map((work: any, index: number) => (
-                <WorkCard 
+              {WorkList.map((work: any, index: number) =>{
+                if(work.category === 'Web Development'){
+                  return (
+                    <WorkCard 
+                    key={index} 
+                    title="Hello World" 
+                    category="Web Development" 
+                    image={work.image}
+                  />
+                  )}
+                return '';
+              })}
+            </Box>
+        </CustomTabPanel>
+        <CustomTabPanel value={value} index={2}>
+          <Box className="grid grid-cols-2 gap-2.5">
+            {WorkList.map((work: any, index: number) =>{
+              if(work.category === 'Design'){
+                return (
+                  <WorkCard 
                   key={index} 
                   title="Hello World" 
                   category="Web Development" 
                   image={work.image}
                 />
-              ))}
-            </Box>
-        </CustomTabPanel>
-        <CustomTabPanel value={value} index={2}>
-          <Box className="grid grid-cols-2 gap-2.5">
-            {WorkList.map((work: any, index: number) => (
-              <WorkCard 
-                key={index} 
-                title="Hello World" 
-                category="Web Development" 
-                image={work.image}
-              />
-            ))}
+              )}
+              return '';
+            })}
           </Box>
         </CustomTabPanel>
         <CustomTabPanel value={value} index={3}>
           <Box className="grid grid-cols-2 gap-2.5">
-            {WorkList.map((work: any, index: number) => (
-              <WorkCard 
-                key={index} 
-                title="Hello World" 
-                category="Web Development" 
-                image={work.image}
-              />
-            ))}
+            {WorkList.map((work: any, index: number) =>{
+              if(work.category === 'Mentorship'){
+                return (
+                  <WorkCard 
+                    key={index} 
+                    title="Hello World" 
+                    category="Web Development" 
+                    image={work.image}
+                  />
+                )}
+              return '';
+            })}
           </Box>
         </CustomTabPanel>
       </Box>

@@ -14,7 +14,7 @@ const SectionComponent = ({title, children}:{title: string; children: any;}) => 
             height: '2.5px',
             background: 'linear-gradient(to right, #E2BFD9, #674188)',
             borderRadius: '16px',
-            width: '350px',
+            width: {xs: '250px'},
           }}
         />
       </Box>
