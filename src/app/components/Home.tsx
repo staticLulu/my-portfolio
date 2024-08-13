@@ -56,15 +56,17 @@ const HomeComponent = () => {
   ];
 
   return (
-    <Box className="grid gap-4">
-      <SectionComponent title="ABOUT ME">
-        <Typography>
-          Hello there! I'm thrilled to welcome you to my portfolio. I am a passionate and versatile
-          full-stack developer with a keen interest in exploring the latest cutting-edge technologies.
-          My journey in the world of web development has been nothing short of exhilarating, and 
-          I constantly strive to enhance my skills and embrace emerging trends in the industry.
-        </Typography>
-      </SectionComponent>
+    <Box className="grid gap-4" id="home">
+      <Box className="h-[220px]">
+        <SectionComponent title="ABOUT ME">
+          <Typography>
+            Hello there! I'm thrilled to welcome you to my portfolio. I am a passionate and versatile
+            full-stack developer with a keen interest in exploring the latest cutting-edge technologies.
+            My journey in the world of web development has been nothing short of exhilarating, and 
+            I constantly strive to enhance my skills and embrace emerging trends in the industry.
+          </Typography>
+        </SectionComponent>
+      </Box>
       <Box className=" grid gap-4">
         <Typography variant="h4" className="font-bold">
           What I Do!

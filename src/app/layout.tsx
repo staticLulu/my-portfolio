@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import AppBar from "./components/AppBar";
 import { Poppins } from 'next/font/google'
+import { Box } from "@mui/material";
 
 
 const poppins = Poppins({
@@ -23,7 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={poppins.className}>
       <body>
-        <AppBar/>
+        <Box className="xs:w-full xl:w-[1280px] xl:m-auto xs:p-4 xl:p-0">
+          <AppBar/>
+        </Box>
         {children} 
       </body>
     </html>

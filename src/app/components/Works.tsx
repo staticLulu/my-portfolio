@@ -67,7 +67,7 @@ const Works = () => {
   };
 
   return (
-    <Box>
+    <Box id="work">
       <SectionComponent title="Portfolio">
       <Box >
         <Box className="grid justify-end">

@@ -116,7 +116,7 @@ function CustomTabPanel(props: TabPanelProps) {
       {...other}
       className="bg-white shadow-sm rounded-xl"
     >
-      {value === index && <Box sx={{p: 3, height: '700px'}}>{children}</Box>}
+      {value === index && <Box className="p-3 overflow-auto h-[700px]">{children}</Box>}
     </div>
   );
 }

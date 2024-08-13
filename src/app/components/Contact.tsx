@@ -26,7 +26,7 @@ const Contact = () => {
   const onSubmit = (data: any) => console.log(data)
 
   return (
-    <Box className="grid gap-4">
+    <Box className="grid gap-4" id="contact">
       <SectionComponent title="Contact">
         <Box className="grid gap-4 grid-cols-2">
           <SectionCard 
