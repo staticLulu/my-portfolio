@@ -8,7 +8,7 @@ export default function Home() {
       <Box flex={1} className='pt-[100px]'>
         <ProfileSection/>
       </Box>
-      <Box flex={3}>
+      <Box flex={2}>
         <TabComponents/>
       </Box>
     </Box>

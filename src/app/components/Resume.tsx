@@ -12,13 +12,13 @@ const Resume = () => {
       id: 1,
       title: 'Education',
       description: "hello world?",
-      icon: <PiGraduationCap className="w-[24px] h-auto text-orange-500"/>
+      icon: <PiGraduationCap className="w-[24px] h-auto text-[#C8A1E0]"/>
     },
     {
       id: 2,
       title: 'Education',
       description: "hello world?",
-      icon: <PiGraduationCap className="w-[24px] h-auto text-orange-500"/>
+      icon: <PiGraduationCap className="w-[24px] h-auto text-[#C8A1E0]"/>
     },
   ];
 
@@ -27,13 +27,13 @@ const Resume = () => {
       id: 1,
       title: 'Education',
       description: "hello world?",
-      icon: <MdOutlineWorkOutline className="w-[24px] h-auto text-orange-500"/>
+      icon: <MdOutlineWorkOutline className="w-[24px] h-auto text-[#C8A1E0]"/>
     },
     {
       id: 2,
       title: 'Education',
       description: "hello world?",
-      icon: <PiGraduationCap className="w-[24px] h-auto text-orange-500"/>
+      icon: <PiGraduationCap className="w-[24px] h-auto text-[#C8A1E0]"/>
     },
   ];
 
@@ -87,7 +87,7 @@ const Resume = () => {
     },
     {
       id: 3,
-      title: 'MentorShip',
+      title: 'High Commitment',
     },
     {
       id: 4,
@@ -101,6 +101,10 @@ const Resume = () => {
       id: 6,
       title: 'Writing',
     },
+    {
+      id: 7,
+      title: 'Mentorship',
+    },
   ];
 
   return (
@@ -108,7 +112,7 @@ const Resume = () => {
       <Box className="grid grid-cols-2 gap-10 mt-4">
         <Box className="grid gap-5">
           <Box className="flex gap-2.5">
-            <PiGraduationCap className="w-[24px] h-auto text-orange-500"/>
+            <PiGraduationCap className="w-[24px] h-auto text-[#C8A1E0]"/>
             <Typography variant="h5" className="font-semibold">Education</Typography>
           </Box>
           {myEducations.map((target: any, index: number) => (
@@ -116,7 +120,7 @@ const Resume = () => {
               key={index}
               title={target.title} 
               icon={target.icon} 
-              backgroundColor={'#FFEBD1'}
+              backgroundColor={'#F2F7FC'}
               description={target.description}
             />
           ))}
@@ -124,7 +128,7 @@ const Resume = () => {
 
         <Box className="grid gap-5">
           <Box className="flex gap-2.5">
-            <MdOutlineWorkOutline className="w-[24px] h-auto text-orange-500"/>
+            <MdOutlineWorkOutline className="w-[24px] h-auto text-[#C8A1E0]"/>
             <Typography variant="h5" className="font-semibold">Experience</Typography>
           </Box>
           
@@ -133,21 +137,21 @@ const Resume = () => {
                 key={index}
                 title={target.title} 
                 icon={target.icon} 
-                backgroundColor={'#FFEBD1'}
+                backgroundColor={'#F2F7FC'}
                 description={target.description}
               />
             ))}
         </Box>
         
         <Box className="grid gap-5">
-          <Box className="flex gap-2.5">
-            <PiGraduationCap className="w-[24px] h-auto text-orange-500"/>
+          <Box className="flex gap-2.5 items-center">
+            <PiGraduationCap className="w-[24px] h-auto text-[#C8A1E0]"/>
             <Typography variant="h5" className="font-semibold">Work skills</Typography>
           </Box>
           <Box className="grid grid-cols-3 gap-2.5">
             {myWorkSkills.map((work: any, index: number) => (
               <Box 
-                className="bg-[#E1E8EF] shadow-sm h-fit text-center p-1.5 rounded-[16px]" 
+                className="bg-[#F2F7FC] shadow-sm h-fit text-center p-1.5 rounded-[16px] text-sm" 
                 key={index}
               >
                 {work.title}
@@ -158,13 +162,13 @@ const Resume = () => {
 
         <Box className="grid gap-2.5">
           <Box className="flex items-center gap-2.5">
-            <PiGraduationCap className="w-[24px] h-auto text-orange-500"/>
+            <PiGraduationCap className="w-[24px] h-auto text-[#C8A1E0]"/>
             <Typography variant="h5" className="font-semibold">Soft skills</Typography>
           </Box>
           <Box className="grid grid-cols-3 gap-2.5">
             {mySoftSkills.map((skill: any, index: number) => (
               <Box 
-                className="bg-[#E1E8EF] shadow-sm h-fit text-center p-1.5 rounded-[16px]" 
+                className="bg-[#F2F7FC] shadow-sm h-fit text-center p-1.5 rounded-[16px] text-sm" 
                 key={index}
               >
                 {skill.title}

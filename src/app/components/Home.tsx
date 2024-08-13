@@ -10,41 +10,57 @@ const HomeComponent = () => {
     {
       id: 1,
       title: 'Web Development',
-      description: 'Dang leverages modern frameworks and libraries to build seamless, high-performance experiences. Their expertise in developing intuitive interfaces and handling complex state management ensures robust and scalable solutions.',
-      icon: <IoCodeSlash className="text-orange-500 w-[22px] h-auto"/>
+      description: <>As a developer, I find myself most 
+        captivated by the power and flexibility of 
+        NEXT.js. I'm always eager to dive into new
+        projects that leverage NEXT.js and 
+        discover innovative ways to create fast, 
+        scalable, and user-friendly applications.</>,
+      icon: <IoCodeSlash className="text-[#C8A1E0] w-[22px] h-auto"/>
     },
     {
       id: 2,
       title: 'Web Development',
-      description: 'Dang Makara is a skilled frontend developer specializing in React.js and Next.js. modern frameworks and libraries to build seamless, high-performance experiences.',
-      icon: <IoCodeSlash className="text-orange-500 w-[22px] h-auto"/>
+      description: <>
+        With a focus on user-centric design and
+        cutting-edge technologies, I thrive on 
+        building intuitive and efficient apps 
+        that make a positive impact on people's 
+        lives. Let's turn ideas into reality and 
+        shape the future together.
+      </>,
+      icon: <IoCodeSlash className="text-[#C8A1E0] w-[22px] h-auto"/>
     },
     {
       id: 3,
       title: 'Web Development',
-      description: 'Dang Makara is a skilled frontend developer specializing in React.js and Next.js. With a strong focus on creating dynamic and user-centric web applications, Dang leverages modern frameworks and libraries to build seamless',
-      icon: <IoCodeSlash className="text-orange-500 w-[22px] h-auto"/>
+      description: <>Crafting visually appealing and intuitive user
+        interfaces that offer a delightful user 
+        experience is something I'm truly fanatic 
+        about.</>,
+      icon: <IoCodeSlash className="text-[#C8A1E0] w-[22px] h-auto"/>
     },
     {
       id: 4,
       title: 'Web Development',
-      description: 'As a hello world?',
-      icon: <IoCodeSlash className="text-orange-500 w-[22px] h-auto"/>
+      description: <>
+        I have also found great joy in sharing my 
+        knowledge with others. Being a technical 
+        mentor allows me to give back to the 
+        community that has supported me 
+        throughout my career. </>,
+      icon: <IoCodeSlash className="text-[#C8A1E0] w-[22px] h-auto"/>
     }
   ];
-
-  const cardColors = ['#FFEBD1', '#F2F7FC'];
 
   return (
     <Box className="grid gap-4">
       <SectionComponent title="ABOUT ME">
         <Typography>
-          As a frontend developer specializing in React.js and Next.js, 
-          I focus on creating dynamic and high-performance web applications. 
-          I combine a strong attention to detail with a commitment to best practices, 
-          crafting intuitive user interfaces that deliver seamless, responsive experiences. 
-          My skills in React.js and Next.js help me build scalable applications and enhance 
-          performance through server-side rendering and static site generation.
+          Hello there! I'm thrilled to welcome you to my portfolio. I am a passionate and versatile
+          full-stack developer with a keen interest in exploring the latest cutting-edge technologies.
+          My journey in the world of web development has been nothing short of exhilarating, and 
+          I constantly strive to enhance my skills and embrace emerging trends in the industry.
         </Typography>
       </SectionComponent>
       <Box className="py-4 grid gap-4">
@@ -56,7 +72,7 @@ const HomeComponent = () => {
           {whatIDos.map((item, index) => (
             <MyCard
               key={item.id}
-              backgroundColor={cardColors[index % cardColors.length]}
+              backgroundColor={'#F2F7FC'}
               title={item.title}
               description={item.description}
               icon={item.icon}
