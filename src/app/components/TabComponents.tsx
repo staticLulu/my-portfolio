@@ -87,7 +87,7 @@ const TabSection = ({ label, icon, value, index, handleChange }: any) => {
       icon={icon} 
       iconPosition="top"
       sx={{
-        background: value === index ? 'linear-gradient(to right, #FF9C1A, #E80505)' : '#E1E8EF',
+        background: value === index ? 'linear-gradient(to right, #E2BFD9, #674188)' : '#F2F7FC',
         color: value === index ? 'white' : 'black',
         borderRadius: '16px',
         boxShadow: 'sm',
@@ -96,7 +96,7 @@ const TabSection = ({ label, icon, value, index, handleChange }: any) => {
         px: 0,
         py: 2,
         '&:hover': {
-          background: value === index ? 'linear-gradient(to right, #fed7aa, #ea580c)': '#D0D7DF',
+          background: value === index ? 'linear-gradient(to right, #F7EFE5, #C8A1E0)': '#D0D7DF',
         },
       }}
       onClick={(event) => handleChange(event, index)}
