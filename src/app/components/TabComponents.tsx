@@ -31,7 +31,15 @@ const TabComponents = () => {
           value={value} 
           onChange={handleChange} 
           aria-label="basic tabs example" 
-          className="bg-white border border-gray-200 rounded-xl p-2"
+          className="
+            bg-white 
+            dark:bg-slate-700 
+            border 
+            border-slate-200 
+            dark:border-slate-500
+            rounded-xl 
+            p-2
+          "
           TabIndicatorProps={{ style: { display: 'none' } }} // Hide the tab indicator
         >
           <TabSection
@@ -95,6 +103,7 @@ const TabSection = ({ label, icon, value, index, handleChange }: any) => {
         mx: 1,
         px: 0,
         py: 2,
+        fontWeight: 500,
         '&:hover': {
           background: value === index ? 'linear-gradient(to right, #EBC7E6, #A084DC)' : '#D0D7DF',
         },
@@ -114,7 +123,7 @@ function CustomTabPanel(props: TabPanelProps) {
       id={`simple-tabpanel-${index}`}
       aria-labelledby={`simple-tab-${index}`}
       {...other}
-      className="bg-white shadow-sm rounded-xl"
+      className="bg-white dark:bg-slate-700 shadow-sm rounded-xl"
     >
       {value === index && <Box className="p-5 overflow-auto h-[700px]">{children}</Box>}
     </div>

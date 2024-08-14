@@ -34,13 +34,16 @@ const ProfileSection = () => {
 
   const socialMediaStyle = `{
     bg-[#F2F7FC] 
+    dark:bg-slate-600
     p-4 
     shadow-sm
+    rounded-xl
   }`
   return (
     <Box 
       className="
         bg-white 
+        dark:bg-slate-700
         rounded-xl 
         shadow-sm 
         grid 
@@ -64,8 +67,8 @@ const ProfileSection = () => {
           />
         </Box>
         <Box className="mt-[-40px] text-center h-fit">
-          <Typography variant="h5" className="font-semibold">Dang Makara</Typography>
-          <Typography variant="subtitle1" className="text-gray-400">Fronted Developer</Typography>
+          <Typography variant="h5" className="font-semibold dark:text-slate-200">Dang Makara</Typography>
+          <Typography variant="subtitle1" className="text-slate-400">Fronted Developer</Typography>
         </Box>
         <Box className="flex gap-4 h-fit shadow-sm">
           <Link target="_blank" href={'/'} className={socialMediaStyle}>
@@ -82,7 +85,20 @@ const ProfileSection = () => {
           </Link>
         </Box>
       </Box>
-      <Box className="p-5 grid gap-4 bg-[#F2F7FC] border border-gray-200 rounded-xl shadow-sm">
+      <Box 
+        className="
+          p-5 
+          grid 
+          gap-4 
+          bg-[#F2F7FC] 
+          dark:bg-slate-600 
+          border 
+          border-gray-200 
+          dark:border-slate-500
+          rounded-xl 
+          shadow-sm
+        "
+      >
         {socialList.map((social: any, index: number) => (
           <MediaSection key={index} title={social.title} icon={social.icon} value={social.value}/>
         ))}
@@ -110,13 +126,13 @@ type TSocialProps = {
 
 const MediaSection = ({title, value, icon}: TSocialProps) => {
   return (
-    <Box className="flex items-center gap-8 border-b border-gray-200 pb-2.5">
+    <Box className="flex items-center gap-8 border-b border-slate-200 dark:border-slate-500 pb-2.5">
       <Box>
         {icon}
       </Box>
       <Box>
-        <Typography className="text-neutral-400 font-medium">{title}</Typography>
-        <Typography className="font-semibold text-sm">{value}</Typography>
+        <Typography className="text-neutral-400 font-medium dark:text-slate-400">{title}</Typography>
+        <Typography className="font-semibold text-sm dark:text-slate-200">{value}</Typography>
       </Box>
   </Box>
   )
