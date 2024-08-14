@@ -12,7 +12,7 @@ const SectionComponent = ({title, children}:{title: string; children: any;}) => 
         <Divider  
           sx={{
             height: '2.5px',
-            background: 'linear-gradient(to right, #E2BFD9, #674188)',
+            background: 'linear-gradient(to right, #BFACE2, #645CBB)',
             borderRadius: '16px',
             width: {xs: '250px'},
           }}

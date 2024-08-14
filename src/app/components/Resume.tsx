@@ -114,7 +114,7 @@ const Resume = () => {
         <Box className="grid grid-cols-2 gap-4 mt-4">
           <Box className="grid gap-5">
             <Box className="flex gap-2.5">
-              <PiGraduationCap className="w-[24px] h-auto text-[#C8A1E0]"/>
+              <PiGraduationCap className="w-[24px] h-auto text-[#A084DC]"/>
               <Typography variant="h5" className="font-semibold">Education</Typography>
             </Box>
             {myEducations.map((target: any, index: number) => (
@@ -129,7 +129,7 @@ const Resume = () => {
 
           <Box className="grid gap-5">
             <Box className="flex gap-2.5">
-              <MdOutlineWorkOutline className="w-[24px] h-auto text-[#C8A1E0]"/>
+              <MdOutlineWorkOutline className="w-[24px] h-auto text-[#A084DC]"/>
               <Typography variant="h5" className="font-semibold">Experience</Typography>
             </Box>
             
@@ -145,7 +145,7 @@ const Resume = () => {
           
           <Box className="grid gap-5">
             <Box className="flex gap-2.5 items-center">
-              <PiGraduationCap className="w-[24px] h-auto text-[#C8A1E0]"/>
+              <PiGraduationCap className="w-[24px] h-auto text-[#A084DC]"/>
               <Typography variant="h5" className="font-semibold">Work skills</Typography>
             </Box>
             <Box className="grid grid-cols-3 gap-2.5">
@@ -160,9 +160,9 @@ const Resume = () => {
             </Box>
           </Box>
 
-          <Box className="grid gap-2.5">
+          <Box className="grid gap-5">
             <Box className="flex items-center gap-2.5">
-              <PiGraduationCap className="w-[24px] h-auto text-[#C8A1E0]"/>
+              <PiGraduationCap className="w-[24px] h-auto text-[#A084DC]"/>
               <Typography variant="h5" className="font-semibold">Soft skills</Typography>
             </Box>
             <Box className="grid grid-cols-3 gap-2.5">
