@@ -59,7 +59,7 @@ const HomeComponent = () => {
     <Box className="grid gap-4" id="home">
       <Box className="h-[220px]">
         <SectionComponent title="ABOUT ME">
-          <Typography>
+          <Typography className="dark:text-slate-400">
             Hello there! I&apos;m thrilled to welcome you to my portfolio. I am a passionate and versatile
             full-stack developer with a keen interest in exploring the latest cutting-edge technologies.
             My journey in the world of web development has been nothing short of exhilarating, and 
@@ -68,7 +68,7 @@ const HomeComponent = () => {
         </SectionComponent>
       </Box>
       <Box className=" grid gap-4">
-        <Typography variant="h4" className="font-bold">
+        <Typography variant="h4" className="font-bold dark:text-slate-200">
           What I Do!
         </Typography>
 
@@ -76,7 +76,6 @@ const HomeComponent = () => {
           {whatIDos.map((item, index) => (
             <MyCard
               key={item.id}
-              backgroundColor={'#F2F7FC'}
               title={item.title}
               description={item.description}
               icon={item.icon}

@@ -115,7 +115,7 @@ const Resume = () => {
           <Box className="grid gap-5">
             <Box className="flex gap-2.5">
               <PiGraduationCap className="w-[24px] h-auto text-[#A084DC]"/>
-              <Typography variant="h5" className="font-semibold">Education</Typography>
+              <Typography variant="h5" className="font-semibold dark:text-slate-200">Education</Typography>
             </Box>
             {myEducations.map((target: any, index: number) => (
               <ResumeCard 
@@ -130,9 +130,8 @@ const Resume = () => {
           <Box className="grid gap-5">
             <Box className="flex gap-2.5">
               <MdOutlineWorkOutline className="w-[24px] h-auto text-[#A084DC]"/>
-              <Typography variant="h5" className="font-semibold">Experience</Typography>
+              <Typography variant="h5" className="font-semibold dark:text-slate-200">Experience</Typography>
             </Box>
-            
               {myExperiences.map((target: any, index: number) => (
                 <ResumeCard 
                   key={index}
@@ -145,13 +144,25 @@ const Resume = () => {
           
           <Box className="grid gap-5">
             <Box className="flex gap-2.5 items-center">
-              <PiGraduationCap className="w-[24px] h-auto text-[#A084DC]"/>
-              <Typography variant="h5" className="font-semibold">Work skills</Typography>
+              {/* <PiGraduationCap className="w-[24px] h-auto text-[#A084DC]"/> */}
+              <Typography variant="h5" className="font-semibold dark:text-slate-200">Work skills</Typography>
             </Box>
             <Box className="grid grid-cols-3 gap-2.5">
               {myWorkSkills.map((work: any, index: number) => (
                 <Box 
-                  className="bg-[#F2F7FC] shadow-sm h-fit text-center p-1.5 rounded-[16px] text-sm" 
+                  className="
+                    bg-[#F2F7FC] 
+                    dark:bg-slate-600 
+                    dark:border 
+                    dark:border-slate-500 
+                    dark:text-slate-200
+                    shadow-sm 
+                    h-fit 
+                    text-center 
+                    p-1.5 
+                    rounded-[16px] 
+                    text-sm
+                  " 
                   key={index}
                 >
                   {work.title}
@@ -162,13 +173,25 @@ const Resume = () => {
 
           <Box className="grid gap-5">
             <Box className="flex items-center gap-2.5">
-              <PiGraduationCap className="w-[24px] h-auto text-[#A084DC]"/>
-              <Typography variant="h5" className="font-semibold">Soft skills</Typography>
+              {/* <PiGraduationCap className="w-[24px] h-auto text-[#A084DC]"/> */}
+              <Typography variant="h5" className="font-semibold dark:text-slate-200">Soft skills</Typography>
             </Box>
             <Box className="grid grid-cols-3 gap-2.5">
               {mySoftSkills.map((skill: any, index: number) => (
                 <Box 
-                  className="bg-[#F2F7FC] shadow-sm h-fit text-center p-1.5 rounded-[16px] text-sm" 
+                  className="
+                    bg-[#F2F7FC] 
+                    dark:bg-slate-600 
+                    dark:border 
+                    dark:border-slate-500 
+                    dark:text-slate-200
+                    shadow-sm 
+                    h-fit 
+                    text-center 
+                    p-1.5 
+                    rounded-[16px] 
+                    text-sm
+                  " 
                   key={index}
                 >
                   {skill.title}
