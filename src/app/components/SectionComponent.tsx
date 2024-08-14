@@ -4,7 +4,7 @@ import { Box, Divider, Typography } from "@mui/material"
 
 const SectionComponent = ({title, children}:{title: string; children: any;}) => {
   return (
-    <Box className="h-[180px] grid gap-2.5">
+    <Box className="grid gap-2.5">
       <Box className="flex items-center gap-8">
         <Typography variant="h4" className="font-bold dark:text-slate-200">
           {title}
