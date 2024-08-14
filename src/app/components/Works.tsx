@@ -30,34 +30,33 @@ function CustomTabPanel(props: TabPanelProps) {
 const WorkList = [
   {
     id: 1,
-    image: 'https://i.pinimg.com/736x/3f/51/f3/3f51f31e9ffe762d0b0a8b0c38f7c1e7.jpg',
-    title: 'Hello world?',
-    category: 'App development'
+    image: '/images/ui.jpg',
+    title: 'Family Registration Figma',
+    category: 'Design',
+    href: 'https://my-portfolio-pi-green-95.vercel.app/'
   },
   {
     id: 2,
-    image: 'https://i.pinimg.com/736x/3f/51/f3/3f51f31e9ffe762d0b0a8b0c38f7c1e7.jpg',
-    title: 'Hello world?',
-    category: 'Web Development'
+    image: '/images/landing.jpg',
+    title: 'Family Registration Landing Page',
+    category: 'Web Development',
+     href: 'https://my-portfolio-pi-green-95.vercel.app/'
   },
   {
     id: 3,
-    image: 'https://i.pinimg.com/736x/3f/51/f3/3f51f31e9ffe762d0b0a8b0c38f7c1e7.jpg',
-    title: 'Hello world?',
-    category: 'Web Development'
+    image: '/images/admin.jpg',
+    title: 'Family Registration Back office',
+    category: 'Web Development',
+     href: 'https://my-portfolio-pi-green-95.vercel.app/'
   },
+ 
   {
     id: 4,
-    image: 'https://i.pinimg.com/736x/3f/51/f3/3f51f31e9ffe762d0b0a8b0c38f7c1e7.jpg',
-    title: 'Hello world?',
-    category: 'Design'
+    image: '/images/e-commerce.jpg',
+    title: 'E-commerce',
+    category: 'Web Development',
+     href: 'https://my-portfolio-pi-green-95.vercel.app/'
   },
-  {
-    id: 5,
-    image: 'https://i.pinimg.com/736x/3f/51/f3/3f51f31e9ffe762d0b0a8b0c38f7c1e7.jpg',
-    title: 'Hello world?',
-    category: 'Mentorship'
-  }
 ];
 const Works = () => {
   const [value, setValue] = useState(0);
@@ -95,12 +94,6 @@ const Works = () => {
               index={2}
               handleChange={handleChange}
             />
-            <TabSection
-              label="Mentorship"
-              value={value}
-              index={3}
-              handleChange={handleChange}
-            />
 
           </Tabs>
         </Box>
@@ -109,9 +102,10 @@ const Works = () => {
             {WorkList.map((work: any, index: number) => (
               <WorkCard 
                 key={index} 
-                title="Hello World" 
-                category="Web Development" 
+                title={work.title} 
+                category={work.category}
                 image={work.image}
+                href={work.href}
               />
             ))}
           </Box>
@@ -122,11 +116,12 @@ const Works = () => {
                 if(work.category === 'Web Development'){
                   return (
                     <WorkCard 
-                    key={index} 
-                    title="Hello World" 
-                    category="Web Development" 
-                    image={work.image}
-                  />
+                      key={index} 
+                      title={work.title}
+                      category={work.category} 
+                      image={work.image}
+                      href={work.href}
+                    />
                   )}
                 return '';
               })}
@@ -138,26 +133,11 @@ const Works = () => {
               if(work.category === 'Design'){
                 return (
                   <WorkCard 
-                  key={index} 
-                  title="Hello World" 
-                  category="Web Development" 
-                  image={work.image}
-                />
-              )}
-              return '';
-            })}
-          </Box>
-        </CustomTabPanel>
-        <CustomTabPanel value={value} index={3}>
-          <Box className="grid grid-cols-2 gap-2.5">
-            {WorkList.map((work: any, index: number) =>{
-              if(work.category === 'Mentorship'){
-                return (
-                  <WorkCard 
                     key={index} 
-                    title="Hello World" 
-                    category="Web Development" 
+                    title={work.title}
+                    category={work.category}
                     image={work.image}
+                    href={work.href}
                   />
                 )}
               return '';

@@ -27,7 +27,7 @@ const ProfileSection = () => {
     {
       id: 3,
       title: 'Location',
-      value: 'Sangkat Toul Sangkae Ti Pir, Khan Russey Keo, Phnom Penh',
+      value: 'Phnom Penh',
       icon: <IoLocationOutline className="w-[24px] h-auto text-[#A084DC]"/>
     }
   ];
@@ -46,8 +46,6 @@ const ProfileSection = () => {
         dark:bg-slate-700
         rounded-xl 
         shadow-sm 
-        grid 
-        grid-rows-2 
         gap-4 
         px-4 
         pb-4
@@ -66,11 +64,11 @@ const ProfileSection = () => {
             className="rounded-[20px] mt-[-80px]"
           />
         </Box>
-        <Box className="mt-[-40px] text-center h-fit">
+        <Box className="xs:mt-4 md:mt-[10px] text-center h-fit">
           <Typography variant="h5" className="font-semibold dark:text-slate-200">Dang Makara</Typography>
           <Typography variant="subtitle1" className="text-slate-400">Fronted Developer</Typography>
         </Box>
-        <Box className="flex gap-4 h-fit shadow-sm">
+        <Box className="grid xs:grid-cols-2 md:grid-cols-4 gap-4 h-fit shadow-sm pt-5">
           <Link target="_blank" href={'/'} className={socialMediaStyle}>
             <Image src="/images/facebook.png" alt="facebook" width={30} height={30} priority unoptimized/>
           </Link>
@@ -87,7 +85,8 @@ const ProfileSection = () => {
       </Box>
       <Box 
         className="
-          p-5 
+          xs:p-2
+          sm:p-5 
           grid 
           gap-4 
           bg-[#F2F7FC] 
@@ -97,6 +96,9 @@ const ProfileSection = () => {
           dark:border-slate-500
           rounded-xl 
           shadow-sm
+          xs:mt-20
+          grid-cols-1
+          items-center
         "
       >
         {socialList.map((social: any, index: number) => (
@@ -126,13 +128,25 @@ type TSocialProps = {
 
 const MediaSection = ({title, value, icon}: TSocialProps) => {
   return (
-    <Box className="flex items-center gap-8 border-b border-slate-200 dark:border-slate-500 pb-2.5">
-      <Box>
+    <Box 
+      className="
+        xs:grid 
+        md:flex 
+        items-center
+        xs:gap-4 
+        md:gap-8 
+        sm:border-b 
+        sm:border-slate-200 
+        dark:border-slate-500 
+        pb-2.5
+      "
+    >
+      <Box className="flex justify-center">
         {icon}
       </Box>
       <Box>
-        <Typography className="text-neutral-400 font-medium dark:text-slate-400">{title}</Typography>
-        <Typography className="font-semibold text-sm dark:text-slate-200">{value}</Typography>
+        <Typography className="text-neutral-400 font-medium dark:text-slate-400 text-center">{title}</Typography>
+        <Typography className="font-semibold text-sm dark:text-slate-200 text-center">{value}</Typography>
       </Box>
   </Box>
   )

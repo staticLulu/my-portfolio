@@ -22,9 +22,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${poppins.className} dark:bg-slate-800`}>
-        <Box className="xs:w-full xl:w-[1280px] xl:m-auto xs:p-4 xl:p-0">
+    <html lang="en" className={poppins.className}>
+      <body className={`dark:bg-slate-800`}>
+        <Box className="xs:w-full xl:w-[1280px] xl:m-auto px-4">
           <AppBar/>
         </Box>
         {children} 

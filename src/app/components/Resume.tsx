@@ -11,30 +11,30 @@ const Resume = () => {
   const myEducations = [
     {
       id: 1,
-      position: 'Education',
-      companyName: "hello world?",
-      date:'2021-2022'
+      position: 'Computer Science & Engineering',
+      companyName: "Studied Computer Science & Engineering at Royal University of Phnom Penh(RUPP)",
+      date:'2019-2023'
     },
     {
       id: 2,
-      position: 'Education',
-      companyName: "hello world?",
-      date:'2021-2022'
+      position: 'High school',
+      companyName: "Studied at Tameang high school",
+      date:'2013-2019'
     },
   ];
 
   const myExperiences = [
     {
       id: 1,
-      position: 'Education',
-      companyName: "hello world?",
-      date:'2021-2022'
+      position: 'IntechDev Innovation',
+      companyName: " To be a staff at IntechDev Innovation Position Frontend Web Developer.",
+      date:'(May-16-2022) - (Present)'
     },
     {
       id: 2,
-      position: 'Education',
-      companyName: "hello world?",
-      date:'2021-2022'
+      position: 'Modernize Tech Insight',
+      companyName: "Internship and pass to be a staff at Modernize Tech Insight position Web development.",
+      date:'(September-2021) - (May-13-2022)'
     },
   ];
 
@@ -73,6 +73,18 @@ const Resume = () => {
     },
     {
       id: 8,
+      title: 'Sass',
+    },
+    {
+      id: 9,
+      title: 'Axios',
+    },
+    {
+      id: 10,
+      title: 'Axios',
+    },
+    {
+      id: 11,
       title: 'Git',
     },
   ];
@@ -92,7 +104,7 @@ const Resume = () => {
     },
     {
       id: 4,
-      title: 'flexibility',
+      title: 'Respect rules of company',
     },
     {
       id: 5,
@@ -100,11 +112,11 @@ const Resume = () => {
     },
     {
       id: 6,
-      title: 'Writing',
+      title: 'flexibility',
     },
     {
       id: 7,
-      title: 'Mentorship',
+      title: 'Work in team',
     },
   ];
 
@@ -113,7 +125,7 @@ const Resume = () => {
       <SectionComponent title="Resume">
         <Box className="grid grid-cols-2 gap-4 mt-4">
           <Box className="grid gap-5">
-            <Box className="flex gap-2.5">
+            <Box className="flex gap-2.5 items-center">
               <PiGraduationCap className="w-[24px] h-auto text-[#A084DC]"/>
               <Typography variant="h5" className="font-semibold dark:text-slate-200">Education</Typography>
             </Box>
