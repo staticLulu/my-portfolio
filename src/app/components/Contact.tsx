@@ -59,8 +59,8 @@ const Contact = () => {
           I am always open to discussing new project, opportunities
           in tech world, partnerships, and more so mentorship.
         </Typography>
-        <form className="grid gap-4 mt-5" onSubmit={handleSubmit(onSubmit)}>
-          <FormControl className="w-full grid gap-4">
+        <form className="grid gap-5 mt-5" onSubmit={handleSubmit(onSubmit)}>
+          <FormControl className="w-full grid gap-2.5">
             <Box>
               <label className="font-semibold dark:text-slate-200">Name:</label>
               <TextField {...register("name")} variant="standard" size="small" fullWidth/>

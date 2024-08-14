@@ -12,14 +12,14 @@ const Home = () => {
 
   return isMobile ? (
     <Box className="w-full p-4">
-      <MobileProfileSection />
+      <ProfileSection />
     </Box>
   ) : (
-    <Box className="flex xs:w-full xs:m-0 xl:w-[1280px] xl:m-auto xl:py-5 gap-4">
+    <Box className="flex xs:w-full xs:m-0 xl:w-[1280px] xl:m-auto md:p-4 gap-4">
       <Box flex={1} className='pt-[100px]'>
         <ProfileSection />
       </Box>
-      <Box flex={2}>
+      <Box flex={2} className="xs:hidden md:grid">
         <TabComponents />
       </Box>
     </Box>
