@@ -18,7 +18,7 @@ const HomeComponent = () => {
         projects that leverage NEXT.js and 
         discover innovative ways to create fast, 
         scalable, and user-friendly applications.</>,
-      icon: <IoCodeSlash className="text-[#C8A1E0] w-[22px] h-auto"/>
+      icon: <IoCodeSlash className="text-[#A084DC] w-[22px] h-auto"/>
     },
     {
       id: 2,
@@ -31,7 +31,7 @@ const HomeComponent = () => {
         lives. Let&apos;s turn ideas into reality and 
         shape the future together.
       </>,
-      icon: <FaInstagram className="text-[#C8A1E0] w-[22px] h-auto"/>
+      icon: <FaInstagram className="text-[#A084DC] w-[22px] h-auto"/>
     },
     {
       id: 3,
@@ -40,7 +40,7 @@ const HomeComponent = () => {
         interfaces that offer a delightful user 
         experience is something I&apos;m truly fanatic 
         about.</>,
-      icon: <FaFigma className="text-[#C8A1E0] w-[22px] h-auto"/>
+      icon: <FaFigma className="text-[#A084DC] w-[22px] h-auto"/>
     },
     {
       id: 4,
@@ -51,7 +51,7 @@ const HomeComponent = () => {
         mentor allows me to give back to the 
         community that has supported me 
         throughout my career. </>,
-      icon: <MdOutlineMonitor className="text-[#C8A1E0] w-[22px] h-auto"/>
+      icon: <MdOutlineMonitor className="text-[#A084DC] w-[22px] h-auto"/>
     }
   ];
 

@@ -16,19 +16,19 @@ const ProfileSection = () => {
       id: 1,
       title: 'Phone',
       value: '089 614 712',
-      icon: <MdPhoneAndroid className="w-[24px] h-auto text-[#C8A1E0]" />
+      icon: <MdPhoneAndroid className="w-[24px] h-auto text-[#A084DC]" />
     },
     {
       id: 2,
       title: 'Email',
       value: 'dang.dangmakara@gmail.com',
-      icon: <LuMailOpen className="w-[22px] h-auto text-[#C8A1E0]"/>
+      icon: <LuMailOpen className="w-[22px] h-auto text-[#A084DC]"/>
     },
     {
       id: 3,
       title: 'Location',
       value: 'Sangkat Toul Sangkae Ti Pir, Khan Russey Keo, Phnom Penh',
-      icon: <IoLocationOutline className="w-[24px] h-auto text-[#C8A1E0]"/>
+      icon: <IoLocationOutline className="w-[24px] h-auto text-[#A084DC]"/>
     }
   ];
 
@@ -68,16 +68,16 @@ const ProfileSection = () => {
           <Typography variant="subtitle1" className="text-gray-400">Fronted Developer</Typography>
         </Box>
         <Box className="flex gap-4 h-fit shadow-sm">
-          <Link href={'/'} className={socialMediaStyle}>
+          <Link target="_blank" href={'/'} className={socialMediaStyle}>
             <Image src="/images/facebook.png" alt="facebook" width={30} height={30} priority unoptimized/>
           </Link>
-          <Link href={'/'}  className={socialMediaStyle}>
+          <Link target="_blank" href={'/'}  className={socialMediaStyle}>
             <Image src="/images/linkedin.png" alt="linkedin" width={30} height={30} priority unoptimized/>
           </Link>
-          <Link href={'/'}  className={socialMediaStyle}>
+          <Link target="_blank" href={'/'}  className={socialMediaStyle}>
             <Image src="/images/telegram.png" alt="telegram" width={30} height={30} priority unoptimized/>
           </Link>
-          <Link href={'/'} className={socialMediaStyle}>
+          <Link target="_blank" href={'https://github.com/staticLulu'} className={socialMediaStyle}>
             <Image src="/images/github.png" alt="github" width={30} height={30} priority unoptimized/>
           </Link>
         </Box>
@@ -88,7 +88,7 @@ const ProfileSection = () => {
         ))}
         <Button 
           sx={{ 
-            background: 'linear-gradient(to right, #E2BFD9, #674188)', 
+            background: 'linear-gradient(to right, #BFACE2, #645CBB)' , 
             color:'white', 
             borderRadius:'20px', 
             textTransform:'capitalize'

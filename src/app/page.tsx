@@ -15,7 +15,7 @@ const Home = () => {
       <MobileProfileSection />
     </Box>
   ) : (
-    <Box className="flex xs:w-full xs:m-0 xl:w-[1280px] xl:m-auto xl:p-0 gap-4">
+    <Box className="flex xs:w-full xs:m-0 xl:w-[1280px] xl:m-auto xl:py-5 gap-4">
       <Box flex={1} className='pt-[100px]'>
         <ProfileSection />
       </Box>

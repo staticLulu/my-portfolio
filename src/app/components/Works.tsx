@@ -175,7 +175,7 @@ const TabSection = ({ label, value, index, handleChange }: any) => {
     <Tab 
       label={label} 
       sx={{
-        color: value === index ? '#674188' : 'gray',
+        color: value === index ? '#A084DC' : 'gray',
         boxShadow: 'sm',
         textTransform: 'capitalize',
         fontSize: '16px',
