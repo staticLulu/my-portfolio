@@ -1,6 +1,6 @@
 'use client'
 
-import { Box, Button, FormControl, FormHelperText, FormLabel, TextField, Typography } from "@mui/material"
+import { Box, Button, FormControl, FormHelperText, TextField, Typography } from "@mui/material"
 import SectionComponent from "./SectionComponent";
 import { MdOutlineAttachEmail, MdOutlinePhoneInTalk } from "react-icons/md";
 import { useForm } from "react-hook-form"
@@ -32,38 +32,47 @@ const Contact = () => {
           <SectionCard 
             title="Phone:" 
             icon={<MdOutlinePhoneInTalk className="w-[20px] h-[20px] text-[#A084DC]"/>} 
-            backgroundColor="#F2F7FC" 
           >
-            <Typography className="font-medium">+855 896 614 712</Typography>
+            <Typography className="font-medium dark:text-slate-400">+855 896 614 712</Typography>
           </SectionCard>
           <SectionCard 
             title="Email:" 
             icon={<MdOutlineAttachEmail className="w-[20px] h-[20px] text-[#A084DC]"/>} 
-            backgroundColor="#F2F7FC" 
           >
-            <Typography className="font-medium">dang.dangmakara@gmail.com</Typography>
+            <Typography className="font-medium dark:text-slate-400">dang.dangmakara@gmail.com</Typography>
           </SectionCard>
         </Box>
       </SectionComponent>
-      <Box className="py-4 px-10 bg-[#F2F7FC] rounded-[12px] shadow-sm">
-        <Typography>
+      <Box 
+        className="
+          py-4 
+          px-10 
+          bg-[#F2F7FC] 
+          dark:bg-slate-600 
+          dark:border 
+          dark:border-slate-500 
+          rounded-[12px] 
+          shadow-sm
+        "
+      >
+        <Typography className="dark:text-slate-200">
           I am always open to discussing new project, opportunities
           in tech world, partnerships, and more so mentorship.
         </Typography>
         <form className="grid gap-4 mt-5" onSubmit={handleSubmit(onSubmit)}>
           <FormControl className="w-full grid gap-4">
             <Box>
-              <label className="font-semibold">Name:</label>
+              <label className="font-semibold dark:text-slate-200">Name:</label>
               <TextField {...register("name")} variant="standard" size="small" fullWidth/>
               <FormHelperText className="text-red-400 m-0">{errors.name?.message}</FormHelperText>
             </Box>
             <Box>
-              <label className="font-semibold">Email:</label>
+              <label className="font-semibold dark:text-slate-200">Email:</label>
               <TextField {...register("email")}  variant="standard" size="small" fullWidth/>
               <FormHelperText className="text-red-400 m-0">{errors.email?.message}</FormHelperText>
             </Box>
             <Box>
-              <label className="font-semibold">Message:</label>
+              <label className="font-semibold dark:text-slate-200">Message:</label>
               <TextField {...register("message")}  variant="standard" size="small" fullWidth/>
               <FormHelperText className="text-red-400 m-0">{errors.message?.message}</FormHelperText>
             </Box>
@@ -73,7 +82,7 @@ const Contact = () => {
             <Button 
               variant="outlined" 
               color="inherit" 
-              className="rounded-full border border-[#A084DC] capitalize"
+              className="rounded-full border border-[#A084DC] capitalize dark:text-slate-200"
               type="submit"
             >
               Submit
@@ -92,12 +101,21 @@ interface MyCardProps {
   icon: any;
 }
 
-const SectionCard = ({ backgroundColor, title, children, icon }: MyCardProps) => {
+const SectionCard = ({ title, children, icon }: MyCardProps) => {
   return (
-    <Box className="p-4 rounded-[12px]"  sx={{ backgroundColor: backgroundColor, }}>
+    <Box 
+      className="
+        p-4 
+        rounded-[12px] 
+        bg-[#F2F7FC] 
+        dark:bg-slate-600 
+        dark:border 
+        dark:border-slate-500
+      "
+    >
       <Box className="flex items-center gap-2">
         {icon}
-        <Typography className="font-semibold text-[18px]">{title}</Typography>
+        <Typography className="font-semibold text-[18px] dark:text-slate-200">{title}</Typography>
       </Box>
       <Box className="pl-7">
         {children}

@@ -2,14 +2,16 @@
 
 import { Box, Button } from "@mui/material";
 import Image from "next/image";
+import ThemeToggle from "./ThemeToggle";
+import { FaCode } from "react-icons/fa";
+import { LuCode2 } from "react-icons/lu";
 
 const AppBar = () => {
   return (
-    <Box className="lg:py-5 pb-10 flex items-center justify-between xs:mb-14">
-      <Image src="/images/logo.png" alt="logo" width={40} height={40} unoptimized priority/>
+    <Box className="lg:py-5 pb-10 flex items-center justify-between xs:mb-14 dark:bg-slate-800">
+      <LuCode2 size={50} className="dark:text-slate-400 dark:opacity-[0.8]"/>
       <Box>
-        <Image src="/images/light.png" alt="light" width={35} height={35} unoptimized priority/>
-        {/* <Image src="/images/light.png" alt="light" width={35} height={35} unoptimized priority/> */}
+        <ThemeToggle/>
       </Box>
     </Box>
   )
