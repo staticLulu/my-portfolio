@@ -31,16 +31,18 @@ const Contact = () => {
         <Box className="grid gap-4 grid-cols-2">
           <SectionCard 
             title="Phone:" 
-            icon={<MdOutlinePhoneInTalk className="w-[20px] h-[20px] text-[#C8A1E0]"/>} 
-            children={<><Typography className="font-medium">+855 896 614 712</Typography></>}
+            icon={<MdOutlinePhoneInTalk className="w-[20px] h-[20px] text-[#A084DC]"/>} 
             backgroundColor="#F2F7FC" 
-          />
+          >
+            <Typography className="font-medium">+855 896 614 712</Typography>
+          </SectionCard>
           <SectionCard 
             title="Email:" 
-            icon={<MdOutlineAttachEmail className="w-[20px] h-[20px] text-[#C8A1E0]"/>} 
-            children={<><Typography className="font-medium">dang.dangmakara@gmail.com</Typography></>}
+            icon={<MdOutlineAttachEmail className="w-[20px] h-[20px] text-[#A084DC]"/>} 
             backgroundColor="#F2F7FC" 
-          />
+          >
+            <Typography className="font-medium">dang.dangmakara@gmail.com</Typography>
+          </SectionCard>
         </Box>
       </SectionComponent>
       <Box className="py-4 px-10 bg-[#F2F7FC] rounded-[12px] shadow-sm">
@@ -71,7 +73,7 @@ const Contact = () => {
             <Button 
               variant="outlined" 
               color="inherit" 
-              className="rounded-full border border-[#674188] capitalize"
+              className="rounded-full border border-[#A084DC] capitalize"
               type="submit"
             >
               Submit
