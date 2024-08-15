@@ -1,8 +1,6 @@
 'use client'
 
-import { Box, Button, IconButton, Typography } from "@mui/material";
-import { IconBaseProps } from "react-icons";
-import { CiLocationOn } from "react-icons/ci";
+import { Box, Button, Typography } from "@mui/material";
 import { LuMailOpen } from "react-icons/lu";
 import { MdPhoneAndroid } from "react-icons/md";
 import Image from "next/image";
@@ -49,7 +47,9 @@ const ProfileSection = () => {
         gap-4 
         px-4 
         pb-4
-        md:h-[700px]
+        md:h-[800px]
+        grid
+        grid-rows-2
       " 
     >
       <Box className="grid justify-center">
@@ -68,7 +68,7 @@ const ProfileSection = () => {
           <Typography variant="h5" className="font-semibold dark:text-slate-200">Dang Makara</Typography>
           <Typography variant="subtitle1" className="text-slate-400">Fronted Developer</Typography>
         </Box>
-        <Box className="grid xs:grid-cols-2 md:grid-cols-4 gap-4 h-fit shadow-sm pt-5">
+        <Box className="grid xs:grid-cols-2 lg:grid-cols-4 gap-4 h-fit shadow-sm pt-5">
           <Link target="_blank" href={'/'} className={socialMediaStyle}>
             <Image src="/images/facebook.png" alt="facebook" width={30} height={30} priority unoptimized/>
           </Link>
@@ -96,13 +96,17 @@ const ProfileSection = () => {
           dark:border-slate-500
           rounded-xl 
           shadow-sm
-          xs:mt-20
           grid-cols-1
           items-center
         "
       >
         {socialList.map((social: any, index: number) => (
-          <MediaSection key={index} title={social.title} icon={social.icon} value={social.value}/>
+          <MediaSection 
+            key={index} 
+            title={social.title} 
+            icon={social.icon} 
+            value={social.value}
+          />
         ))}
         <Button 
           sx={{ 
@@ -131,10 +135,10 @@ const MediaSection = ({title, value, icon}: TSocialProps) => {
     <Box 
       className="
         xs:grid 
-        md:flex 
+        lg:flex 
         items-center
         xs:gap-4 
-        md:gap-8 
+        xl:gap-8 
         sm:border-b 
         sm:border-slate-200 
         dark:border-slate-500 
@@ -145,8 +149,28 @@ const MediaSection = ({title, value, icon}: TSocialProps) => {
         {icon}
       </Box>
       <Box>
-        <Typography className="text-neutral-400 font-medium dark:text-slate-400 text-center">{title}</Typography>
-        <Typography className="font-semibold text-sm dark:text-slate-200 text-center">{value}</Typography>
+        <Typography 
+          className="
+            text-neutral-400 
+            font-medium 
+            dark:text-slate-400 
+            xs:text-center
+            lg:text-left
+          "
+        >
+          {title}
+        </Typography>
+        <Typography 
+          className="
+            font-semibold 
+            xs:text-xs
+            xl:text-sm
+            dark:text-slate-200 
+            text-center
+          "
+        >
+          {value}
+        </Typography>
       </Box>
   </Box>
   )
