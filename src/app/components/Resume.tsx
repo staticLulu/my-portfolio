@@ -1,8 +1,7 @@
 'use client'
 
-import { Box, Button, Typography } from "@mui/material"
+import { Box, Typography } from "@mui/material"
 import SectionComponent from "./SectionComponent";
-import MyCard from "./MyCard";
 import { PiGraduationCap } from "react-icons/pi";
 import { MdOutlineWorkOutline } from "react-icons/md";
 import ResumeCard from "./ResumeCard";
@@ -92,32 +91,33 @@ const Resume = () => {
   const mySoftSkills = [
     {
       id: 1,
-      title: 'Time Management',
-    },
-    {
-      id: 2,
-      title: 'Impeccable Communication',
-    },
-    {
-      id: 3,
-      title: 'High Commitment',
-    },
-    {
-      id: 4,
-      title: 'Respect rules of company',
-    },
-    {
-      id: 5,
       title: 'Research',
     },
     {
-      id: 6,
+      id: 2,
       title: 'flexibility',
     },
     {
-      id: 7,
+      id: 3,
       title: 'Work in team',
     },
+    {
+      id: 4,
+      title: 'Impeccable Communication',
+    },
+    {
+      id: 5,
+      title: 'High Commitment',
+    },
+    {
+      id: 6,
+      title: 'Respect rules of company',
+    },
+    {
+      id: 7,
+      title: 'Time Management',
+    },
+    
   ];
 
   return (
@@ -159,7 +159,7 @@ const Resume = () => {
               {/* <PiGraduationCap className="w-[24px] h-auto text-[#A084DC]"/> */}
               <Typography variant="h5" className="font-semibold dark:text-slate-200">Work skills</Typography>
             </Box>
-            <Box className="grid grid-cols-3 gap-2.5">
+            <Box className="grid md:grid-cols-2 xl:grid-cols-3 gap-2.5">
               {myWorkSkills.map((work: any, index: number) => (
                 <Box 
                   className="
@@ -188,7 +188,7 @@ const Resume = () => {
               {/* <PiGraduationCap className="w-[24px] h-auto text-[#A084DC]"/> */}
               <Typography variant="h5" className="font-semibold dark:text-slate-200">Soft skills</Typography>
             </Box>
-            <Box className="grid grid-cols-3 gap-2.5">
+            <Box className="grid md:grid-cols-1 xl:grid-cols-2 gap-2.5">
               {mySoftSkills.map((skill: any, index: number) => (
                 <Box 
                   className="

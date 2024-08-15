@@ -6,6 +6,7 @@ import { IoCodeSlash } from "react-icons/io5";
 import SectionComponent from "./SectionComponent";
 import { FaFigma, FaInstagram } from "react-icons/fa";
 import { MdOutlineMonitor } from "react-icons/md";
+import { useRef } from "react";
 
 const HomeComponent = () => {
   const whatIDos = [
@@ -54,9 +55,9 @@ const HomeComponent = () => {
       icon: <MdOutlineMonitor className="text-[#A084DC] w-[22px] h-auto"/>
     }
   ];
-
+  const homeRef = useRef(null);
   return (
-    <Box className="grid gap-4" id="home">
+    <Box ref={homeRef} id="home" className="grid gap-4">
       <Box className="h-[220px]">
         <SectionComponent title="ABOUT ME">
           <Typography className="dark:text-slate-400">
@@ -75,7 +76,7 @@ const HomeComponent = () => {
         <Box className="grid grid-cols-2 gap-4">
           {whatIDos.map((item, index) => (
             <MyCard
-              key={item.id}
+              key={index}
               title={item.title}
               description={item.description}
               icon={item.icon}
