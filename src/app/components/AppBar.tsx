@@ -56,11 +56,31 @@ const AppBar = () => {
   ];
 
   const DrawerList = (
-    <Box role="presentation" onClick={toggleDrawer(false)} className="w-[250px] bg-[#F2F7FC] dark:bg-slate-700 h-full">
+    <Box 
+      role="presentation" 
+      onClick={toggleDrawer(false)} 
+      className="w-[calc(100vw-6rem)] bg-[#F2F7FC] dark:bg-slate-700 h-full"
+    >
       <List>
         {items.map((item, index) => (
-          <Box key={index} className='px-6 py-3'>
-            <Box className='flex items-center gap-8 p-2 border-b border-slate-200 dark:border-slate-600'>
+          <Box 
+            key={index} 
+            className='
+              px-6 
+              py-3 
+              cursor-pointer 
+              hover:dark:bg-slate-600 
+              hover:bg-slate-200
+            '
+          >
+            <Box 
+              className='
+                flex 
+                items-center 
+                gap-8 
+                p-2 
+              '
+            >
               {item.icon}
               <Typography className="font-semibold dark:text-slate-400">{item.title}</Typography>
             </Box>
@@ -71,7 +91,16 @@ const AppBar = () => {
   );
 
   return (
-    <Box className="lg:py-5 pb-10 flex items-center justify-between xs:mb-14 dark:bg-slate-800">
+    <Box 
+      className="
+        lg:py-5 
+        pb-10 
+        flex 
+        items-center 
+        justify-between 
+        xs:mb-14 
+        dark:bg-slate-800
+      ">
       <Toolbar>
         <IconButton
           color="inherit"
@@ -82,7 +111,7 @@ const AppBar = () => {
         >
           <MdOutlineMenu />
         </IconButton>
-        <LuCode2 size={50} className="dark:text-slate-400 dark:opacity-[0.8] xs:hidden sm:flex"/>  
+        <LuCode2 size={50} className="dark:text-slate-200 dark:opacity-[0.8] xs:hidden sm:flex"/>  
       </Toolbar>
       <Drawer open={open} onClose={toggleDrawer(false)}>
         {DrawerList}
