@@ -13,7 +13,19 @@ interface MyCardProps {
 
 const WorkCard = ({ title, image, category, href }: MyCardProps) => {
   return (
-    <Link target="_blank" href={href} className="bg-[#F2F7FC] dark:bg-slate-600 dark:border dark:border-slate-500 rounded-[8px] shadow-sm p-2">
+    <Link 
+      target="_blank" 
+      href={href} 
+      className="
+        bg-[#F2F7FC] 
+        dark:bg-slate-600 
+        dark:border 
+        dark:border-slate-500 
+        rounded-[8px] 
+        shadow-sm 
+        p-2
+      "
+    >
         <Image
           src={image}
           alt="image"

@@ -1,6 +1,6 @@
 'use client'
 
-import { Box, Divider, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import MyCard from "./MyCard";
 import { IoCodeSlash } from "react-icons/io5";
 import SectionComponent from "./SectionComponent";
