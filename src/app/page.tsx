@@ -7,14 +7,11 @@ import TabComponents from './components/TabComponents';
 
 const Home = () => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm')); // Check if screen size is xs or sm
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   return isMobile ? (
     <Box className="w-full p-4">
-      
       <ProfileSection />
-
-
     </Box>
   ) : (
     <Box className="flex xs:w-full xs:m-0 xl:w-[1280px] xl:m-auto p-4 gap-4">
