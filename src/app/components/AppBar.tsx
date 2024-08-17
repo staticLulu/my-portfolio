@@ -16,6 +16,8 @@ import { useState } from "react";
 import { IoHomeOutline } from "react-icons/io5";
 import { CgNotes } from "react-icons/cg";
 import { RiContactsBook3Line } from "react-icons/ri";
+import Link from "next/link";
+import { PiUserCircle } from "react-icons/pi";
 
 const AppBar = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -27,25 +29,31 @@ const AppBar = () => {
   const items = [
     {
       id: 1,
-      href: '',
+      href: '/',
+      title: 'Profile',
+      icon: <PiUserCircle size={24} className="dark:text-slate-400" />
+    },
+    {
+      id: 2,
+      href: '/home',
       title: 'Home',
       icon: <IoHomeOutline size={24} className="dark:text-slate-400" />
     },
     {
-      id: 2,
-      href: '',
+      id: 3,
+      href: '/resume',
       title: 'Resume',
       icon: <CgNotes size={24} className="dark:text-slate-400" />
     },
     {
-      id: 3,
-      href: '',
+      id: 4,
+      href: '/work',
       title: 'Work',
       icon: <MdOutlineWorkOutline size={24} className="dark:text-slate-400" />
     },
     {
-      id: 4,
-      href: '',
+      id: 5,
+      href: '/contact',
       title: 'Contact',
       icon: <RiContactsBook3Line size={24} className="dark:text-slate-400" />
     }
@@ -55,32 +63,24 @@ const AppBar = () => {
     <Box 
       role="presentation" 
       onClick={toggleDrawer(false)} 
-      className="w-[calc(100vw-6rem)] bg-[#F2F7FC] dark:bg-slate-700 h-full"
+      className="w-[calc(100vw-4rem)] bg-[#F2F7FC] dark:bg-slate-700 h-full"
     >
-      <List>
+      <List className="pl-8">
         {items.map((item, index) => (
-          <Box 
+          <Link 
             key={index} 
+            href={item.href}
             className='
               px-6 
               py-3 
               cursor-pointer 
-              hover:dark:bg-slate-600 
-              hover:bg-slate-200
             '
           >
-            <Box 
-              className='
-                flex 
-                items-center 
-                gap-8 
-                p-2 
-              '
-            >
+            <Box className='flex items-center gap-8 p-2'>
               {item.icon}
               <Typography className="font-semibold dark:text-slate-400">{item.title}</Typography>
             </Box>
-          </Box>
+          </Link>
         ))}
       </List>
     </Box>
@@ -93,8 +93,8 @@ const AppBar = () => {
         pb-10 
         flex 
         items-center 
-        justify-between 
         xs:mb-14 
+        justify-between 
         dark:bg-slate-800
       ">
       <Toolbar>
@@ -103,11 +103,11 @@ const AppBar = () => {
           aria-label="open drawer"
           edge="start"
           onClick={toggleDrawer(true)}
-          className="mr-2 sm:hidden dark:text-slate-200 dark:opacity-[0.8]"
+          className="mr-2 md:hidden dark:text-slate-200 dark:opacity-[0.8]"
         >
-          <MdOutlineMenu />
+          <MdOutlineMenu size={30}/>
         </IconButton>
-        <LuCode2 size={50} className="dark:text-slate-200 dark:opacity-[0.8] xs:hidden sm:flex"/>  
+        <LuCode2 size={50} className="dark:text-slate-200 dark:opacity-[0.8] xs:hidden md:flex"/>  
       </Toolbar>
       <Drawer open={open} onClose={toggleDrawer(false)}>
         {DrawerList}
