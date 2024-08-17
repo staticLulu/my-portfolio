@@ -9,7 +9,7 @@ import { GoDownload } from "react-icons/go";
 import { IoLocationOutline } from "react-icons/io5";
 
 const ProfileSection = () => {
-  const socialList=[
+  const socialList = [
     {
       id: 1,
       title: 'Phone',
@@ -20,23 +20,24 @@ const ProfileSection = () => {
       id: 2,
       title: 'Email',
       value: 'dang.dangmakara@gmail.com',
-      icon: <LuMailOpen className="w-[22px] h-auto text-[#A084DC]"/>
+      icon: <LuMailOpen className="w-[22px] h-auto text-[#A084DC]" />
     },
     {
       id: 3,
       title: 'Location',
       value: 'Phnom Penh',
-      icon: <IoLocationOutline className="w-[24px] h-auto text-[#A084DC]"/>
+      icon: <IoLocationOutline className="w-[24px] h-auto text-[#A084DC]" />
     }
   ];
 
-  const socialMediaStyle = `{
+  const socialMediaStyle = `
     bg-[#F2F7FC] 
     dark:bg-slate-600
     p-4 
     shadow-sm
     rounded-xl
-  }`
+  `;
+
   return (
     <Box 
       className="
@@ -66,20 +67,20 @@ const ProfileSection = () => {
         </Box>
         <Box className="xs:mt-4 md:mt-[10px] text-center h-fit">
           <Typography variant="h5" className="font-semibold dark:text-slate-200">Dang Makara</Typography>
-          <Typography variant="subtitle1" className="text-slate-400">Fronted Developer</Typography>
+          <Typography variant="subtitle1" className="text-slate-400">Frontend Developer</Typography>
         </Box>
         <Box className="grid xs:grid-cols-2 lg:grid-cols-4 gap-4 h-fit shadow-sm pt-5">
           <Link target="_blank" href={'/'} className={socialMediaStyle}>
-            <Image src="/images/facebook.png" alt="facebook" width={30} height={30} priority unoptimized/>
+            <Image src="/images/facebook.png" alt="facebook" width={30} height={30} priority unoptimized />
           </Link>
-          <Link target="_blank" href={'/'}  className={socialMediaStyle}>
-            <Image src="/images/linkedin.png" alt="linkedin" width={30} height={30} priority unoptimized/>
+          <Link target="_blank" href={'/'} className={socialMediaStyle}>
+            <Image src="/images/linkedin.png" alt="linkedin" width={30} height={30} priority unoptimized />
           </Link>
-          <Link target="_blank" href={'/'}  className={socialMediaStyle}>
-            <Image src="/images/telegram.png" alt="telegram" width={30} height={30} priority unoptimized/>
+          <Link target="_blank" href={'/'} className={socialMediaStyle}>
+            <Image src="/images/telegram.png" alt="telegram" width={30} height={30} priority unoptimized />
           </Link>
           <Link target="_blank" href={'https://github.com/staticLulu'} className={socialMediaStyle}>
-            <Image src="/images/github.png" alt="github" width={30} height={30} priority unoptimized/>
+            <Image src="/images/github.png" alt="github" width={30} height={30} priority unoptimized />
           </Link>
         </Box>
       </Box>
@@ -100,9 +101,9 @@ const ProfileSection = () => {
           items-center
         "
       >
-        {socialList.map((social: any, index: number) => (
+        {socialList.map((social: any) => (
           <MediaSection 
-            key={index} 
+            key={social.id} 
             title={social.title} 
             icon={social.icon} 
             value={social.value}
@@ -111,11 +112,11 @@ const ProfileSection = () => {
         <Button 
           sx={{ 
             background: 'linear-gradient(to right, #BFACE2, #645CBB)' , 
-            color:'white', 
-            borderRadius:'20px', 
-            textTransform:'capitalize'
+            color: 'white', 
+            borderRadius: '20px', 
+            textTransform: 'capitalize'
           }} 
-          startIcon={<GoDownload/>}
+          startIcon={<GoDownload />}
         >
           Download Resume
         </Button>
@@ -126,11 +127,11 @@ const ProfileSection = () => {
 
 type TSocialProps = {
   title: string;
-  value: any;
-  icon: any;
+  value: string;
+  icon: React.ReactNode;
 }
 
-const MediaSection = ({title, value, icon}: TSocialProps) => {
+const MediaSection = ({ title, value, icon }: TSocialProps) => {
   return (
     <Box 
       className="
@@ -172,7 +173,7 @@ const MediaSection = ({title, value, icon}: TSocialProps) => {
           {value}
         </Typography>
       </Box>
-  </Box>
+    </Box>
   )
 }
 

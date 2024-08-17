@@ -1,7 +1,6 @@
 'use client'
 
 import { Box, Typography } from "@mui/material";
-import { IoCodeSlash, IoCodeSlashOutline } from "react-icons/io5";
 
 interface MyCardProps {
   title: string;

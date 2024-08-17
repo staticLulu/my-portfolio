@@ -1,12 +1,9 @@
-'use client'
-
-import { Box, Divider, Typography } from "@mui/material";
-import MyCard from "./MyCard";
+import { Box, Typography } from "@mui/material";
+import MyCard from "../components/MyCard";
 import { IoCodeSlash } from "react-icons/io5";
-import SectionComponent from "./SectionComponent";
+import SectionComponent from "../components/SectionComponent";
 import { FaFigma, FaInstagram } from "react-icons/fa";
 import { MdOutlineMonitor } from "react-icons/md";
-import { useRef } from "react";
 
 const HomeComponent = () => {
   const whatIDos = [
@@ -55,9 +52,9 @@ const HomeComponent = () => {
       icon: <MdOutlineMonitor className="text-[#A084DC] w-[22px] h-auto"/>
     }
   ];
-  const homeRef = useRef(null);
+
   return (
-    <Box ref={homeRef} id="home" className="grid gap-4">
+    <Box className="grid gap-4">
       <Box className="h-[220px]">
         <SectionComponent title="ABOUT ME">
           <Typography className="dark:text-slate-400">

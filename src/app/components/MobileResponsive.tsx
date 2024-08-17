@@ -1,8 +1,6 @@
 'use client'
 
-import { Box, Button, IconButton, Typography } from "@mui/material";
-import { IconBaseProps } from "react-icons";
-import { CiLocationOn } from "react-icons/ci";
+import { Box, Button, Typography } from "@mui/material";
 import { LuMailOpen } from "react-icons/lu";
 import { MdPhoneAndroid } from "react-icons/md";
 import Image from "next/image";
