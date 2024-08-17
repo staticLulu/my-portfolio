@@ -1,10 +1,10 @@
 'use client'
 
 import { Box, Typography } from "@mui/material"
-import SectionComponent from "./SectionComponent";
 import { PiGraduationCap } from "react-icons/pi";
 import { MdOutlineWorkOutline } from "react-icons/md";
-import ResumeCard from "./ResumeCard";
+import SectionComponent from "../components/SectionComponent";
+import ResumeCard from "../components/ResumeCard";
 
 const Resume = () => {
   const myEducations = [
@@ -121,7 +121,7 @@ const Resume = () => {
   ];
 
   return (
-    <Box id="resume">
+    <Box>
       <SectionComponent title="Resume">
         <Box className="grid grid-cols-2 gap-4 mt-4">
           <Box className="grid gap-5">

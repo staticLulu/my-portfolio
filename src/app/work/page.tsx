@@ -1,9 +1,9 @@
 'use client'
 
 import { Box, Tab, Tabs } from "@mui/material"
-import SectionComponent from "./SectionComponent"
+import SectionComponent from "../components/SectionComponent"
 import { MouseEventHandler, useState } from "react"
-import WorkCard from "./WorkCard";
+import WorkCard from "../components/WorkCard";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -66,7 +66,7 @@ const Works = () => {
   };
 
   return (
-    <Box id="work">
+    <Box>
       <SectionComponent title="Portfolio">
       <Box >
         <Box className="grid justify-end">

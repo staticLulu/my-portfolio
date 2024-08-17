@@ -11,7 +11,9 @@ const Home = () => {
 
   return isMobile ? (
     <Box className="w-full p-4">
-      <ProfileSection />
+      <Box className='pt-[100px]'>
+        <ProfileSection />
+      </Box>
     </Box>
   ) : (
     <Box className="flex xs:w-full xs:m-0 xl:w-[1280px] xl:m-auto p-4 gap-4">

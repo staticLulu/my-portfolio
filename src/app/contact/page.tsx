@@ -1,11 +1,11 @@
 'use client'
 
 import { Box, Button, FormControl, FormHelperText, TextField, Typography } from "@mui/material"
-import SectionComponent from "./SectionComponent";
 import { MdOutlineAttachEmail, MdOutlinePhoneInTalk } from "react-icons/md";
 import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
+import SectionComponent from "../components/SectionComponent";
 
 const schema = yup
   .object({
@@ -26,7 +26,7 @@ const Contact = () => {
   const onSubmit = (data: any) => console.log(data)
 
   return (
-    <Box className="grid gap-4" id="contact">
+    <Box className="grid gap-4">
       <SectionComponent title="Contact">
         <Box className="grid gap-4 grid-cols-2">
           <SectionCard 

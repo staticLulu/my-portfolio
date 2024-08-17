@@ -6,10 +6,10 @@ import { BiSolidContact } from "react-icons/bi";
 import { CgNotes } from "react-icons/cg";
 import { IoHomeOutline } from "react-icons/io5";
 import { MdWorkOutline } from "react-icons/md";
-import HomeComponent from "./Home";
-import Resume from "./Resume";
-import Works from "./Works";
-import Contact from "./Contact";
+import Resume from "../resume/page";
+import Works from "../work/page";
+import Contact from "../contact/page";
+import HomeComponent from "../home/page";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -76,7 +76,7 @@ const TabComponents = () => {
         <HomeComponent/>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
-        <Resume/>
+       <Resume/>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
         <Works/>
