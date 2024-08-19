@@ -3,8 +3,8 @@
 import { Box, Typography } from "@mui/material"
 import { PiGraduationCap } from "react-icons/pi";
 import { MdOutlineWorkOutline } from "react-icons/md";
-import SectionComponent from "../components/SectionComponent";
-import ResumeCard from "../components/ResumeCard";
+import SectionComponent from "./SectionComponent";
+import ResumeCard from "./ResumeCard";
 
 const Resume = () => {
   const myEducations = [

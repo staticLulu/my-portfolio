@@ -1,9 +1,9 @@
 'use client'
 
 import { Box, Tab, Tabs } from "@mui/material"
-import SectionComponent from "../components/SectionComponent"
+import SectionComponent from "./SectionComponent"
 import { MouseEventHandler, useState } from "react"
-import WorkCard from "../components/WorkCard";
+import WorkCard from "./WorkCard";
 
 interface TabPanelProps {
   children?: React.ReactNode;

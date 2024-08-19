@@ -6,10 +6,10 @@ import { BiSolidContact } from "react-icons/bi";
 import { CgNotes } from "react-icons/cg";
 import { IoHomeOutline } from "react-icons/io5";
 import { MdWorkOutline } from "react-icons/md";
-import Resume from "../resume/page";
-import Works from "../work/page";
-import Contact from "../contact/page";
-import HomeComponent from "../home/page";
+import HomeComponent from "./Home";
+import Resume from "./Resume";
+import Works from "./Work";
+import Contact from "./Contact";
 
 interface TabPanelProps {
   children?: React.ReactNode;

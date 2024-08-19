@@ -5,7 +5,7 @@ import { MdOutlineAttachEmail, MdOutlinePhoneInTalk } from "react-icons/md";
 import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
-import SectionComponent from "../components/SectionComponent";
+import SectionComponent from "./SectionComponent";
 
 const schema = yup
   .object({
