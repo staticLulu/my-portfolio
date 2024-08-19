@@ -1,9 +1,9 @@
 'use client'
 
 import { Box, Tab, Tabs } from "@mui/material"
-import SectionComponent from "./SectionComponent"
 import { MouseEventHandler, useState } from "react"
-import WorkCard from "./WorkCard";
+import SectionComponent from "../components/SectionComponent";
+import WorkCard from "../components/WorkCard";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -66,15 +66,15 @@ const Works = () => {
   };
 
   return (
-    <Box>
+    <Box className='p-5'>
       <SectionComponent title="Portfolio">
-      <Box >
+      <Box>
         <Box className="grid justify-end">
           <Tabs 
             value={value} 
             onChange={handleChange} 
             aria-label="basic tabs example" 
-            TabIndicatorProps={{ style: { display: 'none' } }}
+            TabIndicatorProps={{ style: { display: 'none', overflow: 'auto' } }}
           >
             <TabSection
               label="All"
@@ -98,7 +98,7 @@ const Works = () => {
           </Tabs>
         </Box>
         <CustomTabPanel value={value} index={0}>
-          <Box className="grid grid-cols-2 gap-2.5">
+          <Box className="grid sm:grid-cols-2 gap-2.5">
             {WorkList.map((work: any, index: number) => (
               <WorkCard 
                 key={index} 
@@ -111,7 +111,7 @@ const Works = () => {
           </Box>
         </CustomTabPanel>
         <CustomTabPanel value={value} index={1}>
-          <Box className="grid grid-cols-2 gap-2.5">
+          <Box className="grid sm:grid-cols-2 gap-2.5">
               {WorkList.map((work: any, index: number) =>{
                 if(work.category === 'Web Development'){
                   return (
@@ -128,7 +128,7 @@ const Works = () => {
             </Box>
         </CustomTabPanel>
         <CustomTabPanel value={value} index={2}>
-          <Box className="grid grid-cols-2 gap-2.5">
+          <Box className="grid sm:grid-cols-2 gap-2.5">
             {WorkList.map((work: any, index: number) =>{
               if(work.category === 'Design'){
                 return (

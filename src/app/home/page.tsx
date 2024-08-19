@@ -1,11 +1,11 @@
 'use client'
 
 import { Box, Typography } from "@mui/material";
-import MyCard from "./MyCard";
 import { IoCodeSlash } from "react-icons/io5";
-import SectionComponent from "./SectionComponent";
 import { FaFigma, FaInstagram } from "react-icons/fa";
 import { MdOutlineMonitor } from "react-icons/md";
+import SectionComponent from "../components/SectionComponent";
+import MyCard from "../components/MyCard";
 
 const HomeComponent = () => {
   const whatIDos = [
@@ -72,7 +72,7 @@ const HomeComponent = () => {
           What I Do!
         </Typography>
 
-        <Box className="grid xs:grid-cols-1 md:grid-cols-2 gap-4">
+        <Box className="grid md:grid-cols-2 gap-4">
           {whatIDos.map((item, index) => (
             <MyCard
               key={index}
