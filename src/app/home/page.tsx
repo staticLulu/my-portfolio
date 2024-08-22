@@ -56,7 +56,7 @@ const HomeComponent = () => {
   ];
 
   return (
-    <Box className="grid gap-4 xs:p-5 md:p-0">
+    <Box className="grid gap-4 p-5">
       <Box className="md:h-[220px]">
         <SectionComponent title="ABOUT ME">
           <Typography className="dark:text-slate-400">
