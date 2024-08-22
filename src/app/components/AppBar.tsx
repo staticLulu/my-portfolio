@@ -63,7 +63,7 @@ const AppBar = () => {
               <Avatar 
                 alt="Remy Sharp" 
                 src={'/images/profile3.jpg' } 
-                sx={{ width: 60, height: 60 }}
+                sx={{ width: 50, height: 50 }}
                 className="border border-[#79AC78]" 
               /> 
               : item.icon }
