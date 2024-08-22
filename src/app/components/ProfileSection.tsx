@@ -70,17 +70,61 @@ const ProfileSection = () => {
           <Typography variant="subtitle1" className="text-slate-400">Frontend Developer</Typography>
         </Box>
         <Box className="grid xs:grid-cols-2 lg:grid-cols-4 gap-4 h-fit shadow-sm pt-5">
-          <Link target="_blank" href={'/'} className={socialMediaStyle}>
-            <Image src="/images/facebook.png" alt="facebook" width={30} height={30} priority unoptimized />
+          <Link 
+            target="_blank" 
+            href={"https://mail.google.com/mail/?view=cm&fs=1&to=dangmakara01@gmail.com"} 
+            className={socialMediaStyle}
+          >
+            <Image 
+              src="/images/gmail.png" 
+              alt="facebook" 
+              width={30} 
+              height={30} 
+              priority 
+              unoptimized 
+            />
           </Link>
-          <Link target="_blank" href={'/'} className={socialMediaStyle}>
-            <Image src="/images/linkedin.png" alt="linkedin" width={30} height={30} priority unoptimized />
+          <Link 
+            target="_blank" 
+            href={'https://www.linkedin.com/in/dang-makara-b8b0a6214/'} 
+            className={socialMediaStyle}
+          >
+            <Image 
+              src="/images/linkedin.png" 
+              alt="linkedin" 
+              width={30} 
+              height={30} 
+              priority 
+              unoptimized 
+            />
           </Link>
-          <Link target="_blank" href={'/'} className={socialMediaStyle}>
-            <Image src="/images/telegram.png" alt="telegram" width={30} height={30} priority unoptimized />
+          <Link 
+            target="_blank" 
+            href="https://t.me/umilulu" 
+            className={socialMediaStyle}
+          >
+            <Image 
+              src="/images/telegram.png" 
+              alt="telegram" 
+              width={30} 
+              height={30} 
+              priority 
+              unoptimized 
+            />
           </Link>
-          <Link target="_blank" href={'https://github.com/staticLulu'} className={socialMediaStyle}>
-            <Image src="/images/github.png" alt="github" width={30} height={30} priority unoptimized />
+          <Link 
+            target="_blank" 
+            href={'https://github.com/staticLulu'} 
+            className={socialMediaStyle}
+          >
+            <Image 
+              src="/images/github.png" 
+              alt="github" 
+              width={30} 
+              height={30} 
+              priority 
+              unoptimized 
+            />
           </Link>
         </Box>
       </Box>
