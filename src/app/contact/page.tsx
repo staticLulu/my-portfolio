@@ -20,15 +20,19 @@ const Contact = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm({
     resolver: yupResolver(schema),
   })
-  const onSubmit = (data: any) => console.log(data)
+  const onSubmit = (data: any) => {
+    console.log(data)
+    reset();
+  }
 
   return (
-    <Box className="grid gap-4">
+    <Box className="grid gap-4 p-4">
       <SectionComponent title="Contact">
-        <Box className="grid gap-4 grid-cols-2">
+        <Box className="grid gap-4 md:grid-cols-2">
           <SectionCard 
             title="Phone:" 
             icon={<MdOutlinePhoneInTalk className="w-[20px] h-[20px] text-[#A084DC]"/>} 
@@ -39,7 +43,7 @@ const Contact = () => {
             title="Email:" 
             icon={<MdOutlineAttachEmail className="w-[20px] h-[20px] text-[#A084DC]"/>} 
           >
-            <Typography className="font-medium dark:text-slate-400">dang.dangmakara@gmail.com</Typography>
+            <Typography className="font-medium dark:text-slate-400 xs:text-sm sm:text-base">dang.dangmakara@gmail.com</Typography>
           </SectionCard>
         </Box>
       </SectionComponent>

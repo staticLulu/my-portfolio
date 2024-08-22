@@ -97,7 +97,7 @@ const AppBar = () => {
         justify-between 
         dark:bg-slate-800
       ">
-      <Toolbar>
+      <Toolbar className="p-0">
         <IconButton
           color="inherit"
           aria-label="open drawer"
