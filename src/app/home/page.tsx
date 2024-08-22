@@ -1,9 +1,11 @@
+'use client'
+
 import { Box, Typography } from "@mui/material";
-import MyCard from "../components/MyCard";
 import { IoCodeSlash } from "react-icons/io5";
-import SectionComponent from "../components/SectionComponent";
 import { FaFigma, FaInstagram } from "react-icons/fa";
 import { MdOutlineMonitor } from "react-icons/md";
+import SectionComponent from "../components/SectionComponent";
+import MyCard from "../components/MyCard";
 
 const HomeComponent = () => {
   const whatIDos = [
@@ -54,8 +56,8 @@ const HomeComponent = () => {
   ];
 
   return (
-    <Box className="grid gap-4">
-      <Box className="h-[220px]">
+    <Box className="grid gap-4 xs:p-5 md:p-0">
+      <Box className="md:h-[220px]">
         <SectionComponent title="ABOUT ME">
           <Typography className="dark:text-slate-400">
             Hello there! I&apos;m thrilled to welcome you to my portfolio. I am a passionate and versatile
@@ -65,12 +67,12 @@ const HomeComponent = () => {
           </Typography>
         </SectionComponent>
       </Box>
-      <Box className=" grid gap-4">
+      <Box className="grid gap-4">
         <Typography variant="h4" className="font-bold dark:text-slate-200">
           What I Do!
         </Typography>
 
-        <Box className="grid grid-cols-2 gap-4">
+        <Box className="grid md:grid-cols-2 gap-4">
           {whatIDos.map((item, index) => (
             <MyCard
               key={index}
