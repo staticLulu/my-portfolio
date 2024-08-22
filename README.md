@@ -19,10 +19,10 @@ To set up and run this project locally:
 ### 2. Navigate to the project directory:
     cd my-portfolio
 
-### 3.Install the necessary dependencies:
+### 3. Install the necessary dependencies:
     npm install
 
-### 4.Start the development server:
+### 4. Start the development server:
     npm run dev
     
 ## Usage
