@@ -1,6 +1,7 @@
 'use client'
 
 import { 
+  Avatar,
   Box, 
   Divider, 
   Drawer, 
@@ -18,6 +19,7 @@ import { CgNotes } from "react-icons/cg";
 import { RiContactsBook3Line } from "react-icons/ri";
 import Link from "next/link";
 import { PiUserCircle } from "react-icons/pi";
+import Image from "next/image";
 
 const AppBar = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -27,62 +29,48 @@ const AppBar = () => {
   };
 
   const items = [
-    {
-      id: 1,
-      href: '/',
-      title: 'Profile',
-      icon: <PiUserCircle size={24} className="dark:text-slate-400" />
-    },
-    {
-      id: 2,
-      href: '/home',
-      title: 'Home',
-      icon: <IoHomeOutline size={24} className="dark:text-slate-400" />
-    },
-    {
-      id: 3,
-      href: '/resume',
-      title: 'Resume',
-      icon: <CgNotes size={24} className="dark:text-slate-400" />
-    },
-    {
-      id: 4,
-      href: '/work',
-      title: 'Work',
-      icon: <MdOutlineWorkOutline size={24} className="dark:text-slate-400" />
-    },
-    {
-      id: 5,
-      href: '/contact',
-      title: 'Contact',
-      icon: <RiContactsBook3Line size={24} className="dark:text-slate-400" />
-    }
+    { id: 1, href: '/', title: 'Profile', icon: ''},
+    { id: 2, href: '/home', title: 'Home', icon: <IoHomeOutline size={24} className="dark:text-slate-400" /> },
+    { id: 3, href: '/resume', title: 'Resume', icon: <CgNotes size={24} className="dark:text-slate-400" /> },
+    { id: 4, href: '/work', title: 'Work', icon: <MdOutlineWorkOutline size={24} className="dark:text-slate-400" /> },
+    { id: 5, href: '/contact', title: 'Contact', icon: <RiContactsBook3Line size={24} className="dark:text-slate-400" /> }
   ];
 
   const DrawerList = (
     <Box 
       role="presentation" 
       onClick={toggleDrawer(false)} 
-      className="w-[calc(100vw-4rem)] bg-[#F2F7FC] dark:bg-slate-700 h-full"
+      className="w-[calc(100vw-5rem)] bg-[#F2F7FC] dark:bg-slate-700 h-full"
     >
-      <List className="pl-8">
-        {items.map((item, index) => (
-          <Link 
-            key={index} 
-            href={item.href}
-            className='
-              px-6 
-              py-3 
-              cursor-pointer 
-            '
+      {items.map((item: any, index) => (
+        <Link 
+          key={index} 
+          href={item.href}
+          className='py-3 cursor-pointer'
+        >
+          <Box 
+            className={`
+              flex 
+              items-center 
+              gap-8 
+              py-4 
+              px-8 
+              ${item.title === 'Profile' ? 
+                'border-b dark:dark:bg-slate-600 dark:border-b-slate-500 border-b-slate-200 shadow-sm'
+                : 'border-none'}`}
           >
-            <Box className='flex items-center gap-8 p-2'>
-              {item.icon}
-              <Typography className="font-semibold dark:text-slate-400">{item.title}</Typography>
-            </Box>
-          </Link>
-        ))}
-      </List>
+            {item.title === 'Profile' ? 
+              <Avatar 
+                alt="Remy Sharp" 
+                src={'/images/profile3.jpg' } 
+                sx={{ width: 60, height: 60 }}
+                className="border border-[#79AC78]" 
+              /> 
+              : item.icon }
+            <Typography className="font-semibold dark:text-slate-400">{item.title}</Typography>
+          </Box>
+        </Link>
+      ))}
     </Box>
   );
 

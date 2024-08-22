@@ -38,6 +38,22 @@ const ProfileSection = () => {
     rounded-xl
   `;
 
+  const downloadPDF = ({ url, filename }: any) => {
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+  
+  const resumeClick = (e: any) => {
+    e.preventDefault();
+    // Correct usage of downloadPDF with both url and filename parameters
+    downloadPDF({ url: "/resources/CURRICULUM-VITAE(frontend web).pdf", filename: "Dang_Makara_Resume.pdf" });
+  };
+  
+
   return (
     <Box 
       className="
@@ -161,6 +177,7 @@ const ProfileSection = () => {
             textTransform: 'capitalize'
           }} 
           startIcon={<GoDownload />}
+          onClick={resumeClick}
         >
           Download Resume
         </Button>
