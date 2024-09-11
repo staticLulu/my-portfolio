@@ -31,7 +31,7 @@ export default function MyDialog({
             justifyContent: 'center', 
             height: '100px', 
             alignItems:'center',
-            fontSize: '30px'
+            fontSize: '16px'
           }}
           className='
             dark:bg-slate-600 
