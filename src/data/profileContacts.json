@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Phone",
+    "value": "089 614 712",
+    "icon": "MdPhoneAndroid"
+  },
+  {
+    "id": 2,
+    "title": "Email",
+    "value": "dang.dangmakara@gmail.com",
+    "icon": "LuMailOpen"
+  },
+  {
+    "id": 3,
+    "title": "Location",
+    "value": "Phnom Penh",
+    "icon": "IoLocationOutline"
+  }
+]

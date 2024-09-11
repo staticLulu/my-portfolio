@@ -1,0 +1,32 @@
+[
+  {   
+    "id": 1, 
+    "href": "/#", 
+    "title": "Profile", 
+    "icon": "" 
+  },
+  {
+    "id": 2,
+    "href": "/#home",
+    "title": "Home",
+    "icon": "IoHomeOutline"
+  },
+  {
+    "id": 3,
+    "href": "/#resume",
+    "title": "Resume",
+    "icon": "CgNotes"
+  },
+  {
+    "id": 4,
+    "href": "/#work",
+    "title": "Work",
+    "icon": "MdOutlineWorkOutline"
+  },
+  {
+    "id": 5,
+    "href": "/#contact",
+    "title": "Contact",
+    "icon": "RiContactsBook3Line"
+  }
+]

@@ -12,10 +12,10 @@ const ResumeCard = ({ position, date, company }: MyCardProps) => {
   return (
     <Box 
       className="
-        shadow-sm 
+        shadow-[0px_1px_5px_rgba(0,0,0,0.2)] 
         p-4 
         rounded-[16px] 
-        bg-[#F2F7FC] 
+        bg-cardBG
         dark:bg-slate-600 
         dark:border 
         dark:border-slate-500
