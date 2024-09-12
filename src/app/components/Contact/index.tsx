@@ -32,7 +32,6 @@ const Contact = () => {
     resolver: yupResolver(schema),
   });
   const onSubmit = (data: any) => {
-    console.log(data);
     reset();
   };
 

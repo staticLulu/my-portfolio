@@ -41,9 +41,11 @@ const Home = () => {
   };
 
   return (
-    <Box className='xs:grid md:flex p-4 gap-4 max-w-screen-xl mx-auto'>
+    <Box className='xs:grid md:flex gap-4 max-w-screen-xl mx-auto mt-10 md:p-4'>
       <Box flex={1} className='pt-[100px]'>
-        <ProfileSection />
+        <Box className="xs:p-4 md:p-0">
+          <ProfileSection />
+        </Box>
       </Box>
 
       <Box className="block md:hidden">
@@ -59,33 +61,33 @@ const Home = () => {
         <ScrollElement name="contact" id="contact">
           <Contact />
         </ScrollElement>
+
+        {showScrollToTop && (
+          <Button 
+            onClick={scrollToTop} 
+            variant="text" 
+            sx={{
+              position: 'fixed',
+              bottom: 16,
+              right: 16,
+              zIndex: 1000,
+              borderRadius: '50%',
+              minWidth: '50px',
+              minHeight: '50px',
+              boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
+              backgroundColor: '#C8A1E0',
+              color: "white"
+            }}
+          >
+            <BiArrowToTop size={24}/>
+          </Button>
+        )}
       </Box>
 
       {/* TabComponents for tablet to desktop view */}
       <Box flex={2} className='hidden md:grid'>
         <TabComponents />
       </Box>
-
-      {/* Scroll to Top button */}
-      {showScrollToTop && (
-        <Button 
-          onClick={scrollToTop} 
-          variant="contained" 
-          color="primary"
-          sx={{
-            position: 'fixed',
-            bottom: 16,
-            right: 16,
-            zIndex: 1000,
-            borderRadius: '50%',
-            minWidth: '50px',
-            minHeight: '50px',
-            boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)'
-          }}
-        >
-          <BiArrowToTop />
-        </Button>
-      )}
     </Box>
   );
 };

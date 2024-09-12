@@ -27,8 +27,7 @@ const ProfileSection = () => {
   
   const resumeClick = (e: any) => {
     e.preventDefault();
-    // Correct usage of downloadPDF with both url and filename parameters
-    downloadPDF({ url: "/resources/Dang_Makara_Resume.pdf", filename: "Dang_Makara_Resume.pdf" });
+    downloadPDF({ url: "/resources/Resume_Dang_Makara.pdf", filename: "Resume_Dang_Makara.pdf" });
   };
   
 
