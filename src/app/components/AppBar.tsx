@@ -6,33 +6,29 @@ import { LuCode2 } from "react-icons/lu";
 import { MdOutlineMenu } from "react-icons/md";
 import { useEffect, useState } from "react";
 import { useRouter, usePathname } from 'next/navigation';
-import { Link as ScrollLink } from "react-scroll"; // Import Link from react-scroll
+import { Link as ScrollLink } from "react-scroll"; 
 import appBarItems from "@/data/appBarItems.json";
 import { AppBarIconMapping } from '../lib/iconMapping';
 
 const AppBar = () => {
   const router = useRouter();
-  const pathname = usePathname(); // Get the current path
+  const pathname = usePathname();
   const [open, setOpen] = useState<boolean>(false);
 
   const toggleDrawer = (newOpen: boolean) => () => {
     setOpen(newOpen);
   };
 
-  // Handle navigation for both scrollable elements and external pages
   const handleMenuClick = (href: string) => {
     const targetId = href.startsWith("#") ? href.substring(1) : null;
     if (targetId && pathname === "/") {
-      // Internal scroll to component if on the same page
       handleScrollTo(targetId);
     } else {
-      // Navigate to a different page
       router.push(href);
     }
-    setOpen(false); // Close drawer after navigating or scrolling
+    setOpen(false); 
   };
 
-  // Handle scroll within the page for react-scroll
   const handleScrollTo = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -40,12 +36,11 @@ const AppBar = () => {
     }
   };
 
-  // Automatically scroll to the right component when loading the page
   useEffect(() => {
     if (pathname === "/") {
       const hash = window.location.hash;
       if (hash) {
-        handleScrollTo(hash.substring(1)); // Scroll to the element based on URL hash
+        handleScrollTo(hash.substring(1)); 
       }
     }
   }, [pathname]);
