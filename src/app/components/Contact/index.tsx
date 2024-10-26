@@ -70,7 +70,7 @@ const Contact = () => {
           dark:border 
           dark:border-slate-500 
           rounded-[12px] 
-          shadow-[0px_1px_5px_rgba(0,0,0,0.2)] 
+          shadow-[0px_1px_5px_rgba(0,0,0,0.15)] 
         '
       >
         <Typography className='dark:text-slate-200'>
@@ -154,7 +154,7 @@ const SectionCard = ({ title, children, icon }: MyCardProps) => {
         dark:bg-slate-600 
         dark:border 
         dark:border-slate-500
-        shadow-[0px_1px_5px_rgba(0,0,0,0.2)] 
+        shadow-[0px_1px_5px_rgba(0,0,0,0.15)] 
       '
     >
       <Box className='flex items-center gap-2'>
