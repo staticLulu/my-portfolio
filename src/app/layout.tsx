@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={poppins.className}>
-      <body className={`dark:bg-slate-800`}>
+      <body className={`dark:bg-slate-800`} suppressHydrationWarning>
         <Box className="xs:w-full xl:w-[1280px] xl:m-auto xs:px-4 xl:px-0">
           <AppBar/>
         </Box>

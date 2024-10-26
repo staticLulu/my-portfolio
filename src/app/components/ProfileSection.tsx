@@ -74,11 +74,11 @@ const ProfileSection = () => {
           <Image 
             src="/images/profile3.jpg" 
             alt="profile" 
-            width={150} 
-            height={166.56} 
-            priority 
+            width={135} 
+            height={167} 
             unoptimized 
-            className="rounded-[20px] mt-[-80px]"
+            loading="lazy"
+            className="rounded-[20px] mt-[-80px] object-cover"
           />
         </Box>
         <Box className="xs:mt-4 md:mt-[10px] text-center h-fit">
@@ -116,7 +116,7 @@ const ProfileSection = () => {
           </Link>
           <Link 
             target="_blank" 
-            href="https://t.me/umilulu" 
+            href="https://t.me/dangmakara" 
             className={socialMediaStyle}
           >
             <Image 
