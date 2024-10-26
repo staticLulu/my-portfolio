@@ -23,7 +23,7 @@ const WorkCard = ({ title, image, category, href, onClick }: MyCardProps) => {
         dark:border 
         dark:border-slate-500 
         rounded-[8px] 
-        shadow-[0px_1px_5px_rgba(0,0,0,0.2)]
+        shadow-[0px_1px_5px_rgba(0,0,0,0.15)]
         p-2
         cursor-pointer
       "
