@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Frontend Development:",
+    "description": "I specialize in React.js and Next.js, building fast, scalable, and responsive web applications that deliver great user experiences.",
+    "icon": "FaCode"
+  },
+  {
+    "id": 2,
+    "title": "UI/UX Implementation:",
+    "description": "I turn design ideas into real, user-friendly websites that look good and are simple to navigate.",
+    "icon": "MdOutlineDesignServices"
+  },
+  { 
+    "id": 3,
+    "title": "Reusable Components",
+    "description": "I create pieces of code that can be used again in different parts of the project, saving time and effort.",
+    "icon": "FaCubes"
+  },
+  {
+    "id": 4,
+    "title": "Responsive & SEO-Optimized",
+    "description": "I make sure websites work well on all devices (phones, tablets, computers) and are easy to find on search engines like Google.",
+    "icon": "MdDevices"
+  }
+]

@@ -1,35 +1,13 @@
 'use client'
 
 import { Box, Button, Typography } from "@mui/material";
-import { LuMailOpen } from "react-icons/lu";
-import { MdPhoneAndroid } from "react-icons/md";
 import Image from "next/image";
 import Link from "next/link";
 import { GoDownload } from "react-icons/go";
-import { IoLocationOutline } from "react-icons/io5";
+import profileContactList from "@/data/profileContacts.json";
+import { ProfileContactIconMapping } from '../lib/iconMapping';
 
 const ProfileSection = () => {
-  const socialList = [
-    {
-      id: 1,
-      title: 'Phone',
-      value: '089 614 712',
-      icon: <MdPhoneAndroid className="w-[24px] h-auto text-[#A084DC]" />
-    },
-    {
-      id: 2,
-      title: 'Email',
-      value: 'dang.dangmakara@gmail.com',
-      icon: <LuMailOpen className="w-[22px] h-auto text-[#A084DC]" />
-    },
-    {
-      id: 3,
-      title: 'Location',
-      value: 'Phnom Penh',
-      icon: <IoLocationOutline className="w-[24px] h-auto text-[#A084DC]" />
-    }
-  ];
-
   const socialMediaStyle = `
     bg-[#F2F7FC] 
     dark:bg-slate-600
@@ -49,8 +27,7 @@ const ProfileSection = () => {
   
   const resumeClick = (e: any) => {
     e.preventDefault();
-    // Correct usage of downloadPDF with both url and filename parameters
-    downloadPDF({ url: "/resources/CURRICULUM-VITAE(frontend web).pdf", filename: "Dang_Makara_Resume.pdf" });
+    downloadPDF({ url: "/resources/Resume_Dang_Makara.pdf", filename: "Resume_Dang_Makara.pdf" });
   };
   
 
@@ -161,14 +138,17 @@ const ProfileSection = () => {
           items-center
         "
       >
-        {socialList.map((social: any) => (
-          <MediaSection 
-            key={social.id} 
-            title={social.title} 
-            icon={social.icon} 
-            value={social.value}
-          />
-        ))}
+        {profileContactList.map((social: any) => {
+          const IconComponent = ProfileContactIconMapping[social.icon];
+          return (
+            <MediaSection 
+              key={social.id} 
+              title={social.title} 
+              icon={<IconComponent className="w-[24px] h-auto text-iconColor"/>} 
+              value={social.value}
+            />
+          )
+        })}
         <Button 
           sx={{ 
             background: 'linear-gradient(to right, #BFACE2, #645CBB)' , 

@@ -1,26 +1,91 @@
-'use client'
+"use client";
 
-import React from 'react';
-import { Box, useMediaQuery, useTheme } from '@mui/material';
-import ProfileSection from './components/ProfileSection';
-import TabComponents from './components/TabComponents';
+import React, { useEffect, useState } from "react";
+import { Box, Button } from "@mui/material";
+import ProfileSection from "./components/ProfileSection";
+import TabComponents from "./components/TabComponents";
+import HomeComponent from './components/Home';
+import { Element as ScrollElement } from "react-scroll"; // Scroll element
+import Resume from './components/Resume';
+import Works from './components/Work';
+import Contact from './components/Contact';
+import { BiArrowToTop } from 'react-icons/bi';
 
 const Home = () => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const [showScrollToTop, setShowScrollToTop] = useState(false);
 
-  return isMobile ? (
-    <Box className="w-full p-4">
-      <Box className='pt-[100px]'>
-        <ProfileSection />
-      </Box>
-    </Box>
-  ) : (
-    <Box className="flex xs:w-full xs:m-0 xl:w-[1280px] xl:m-auto p-4 gap-4">
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const homeHeight = document.getElementById('home')?.offsetHeight || 0;
+
+      if (scrollPosition > homeHeight) {
+        setShowScrollToTop(true);
+      } else {
+        setShowScrollToTop(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  return (
+    <Box className='xs:grid md:flex gap-4 max-w-screen-xl mx-auto mt-10 md:p-4'>
       <Box flex={1} className='pt-[100px]'>
-        <ProfileSection />
+        <Box className="xs:p-4 md:p-0">
+          <ProfileSection />
+        </Box>
       </Box>
-      <Box flex={2} className="xs:hidden md:grid">
+
+      <Box className="block md:hidden">
+        <ScrollElement name="home" id="home">
+          <HomeComponent />
+        </ScrollElement>
+        <ScrollElement name="resume" id="resume">
+          <Resume />
+        </ScrollElement>
+        <ScrollElement name="works" id="works">
+          <Works />
+        </ScrollElement>
+        <ScrollElement name="contact" id="contact">
+          <Contact />
+        </ScrollElement>
+
+        {showScrollToTop && (
+          <Button 
+            onClick={scrollToTop} 
+            variant="text" 
+            sx={{
+              position: 'fixed',
+              bottom: 16,
+              right: 16,
+              zIndex: 1000,
+              borderRadius: '50%',
+              minWidth: '50px',
+              minHeight: '50px',
+              boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
+              backgroundColor: '#C8A1E0',
+              color: "white"
+            }}
+          >
+            <BiArrowToTop size={24}/>
+          </Button>
+        )}
+      </Box>
+
+      {/* TabComponents for tablet to desktop view */}
+      <Box flex={2} className='hidden md:grid'>
         <TabComponents />
       </Box>
     </Box>

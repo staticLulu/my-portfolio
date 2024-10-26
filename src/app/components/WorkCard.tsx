@@ -9,22 +9,25 @@ interface MyCardProps {
   image: string;
   category: any;
   href: any;
+  onClick?: () => void;
 }
 
-const WorkCard = ({ title, image, category, href }: MyCardProps) => {
+const WorkCard = ({ title, image, category, href, onClick }: MyCardProps) => {
   return (
-    <Link 
-      target="_blank" 
-      href={href} 
+    <Box 
+      // target="_blank" 
+      // href={href} 
       className="
-        bg-[#F2F7FC] 
+        bg-cardBG
         dark:bg-slate-600 
         dark:border 
         dark:border-slate-500 
         rounded-[8px] 
-        shadow-sm 
+        shadow-[0px_1px_5px_rgba(0,0,0,0.2)]
         p-2
+        cursor-pointer
       "
+      onClick={onClick}
     >
         <Image
           src={image}
@@ -43,7 +46,7 @@ const WorkCard = ({ title, image, category, href }: MyCardProps) => {
             {title}
           </Typography>
         </Box>
-    </Link>
+    </Box>
   );
 };
 

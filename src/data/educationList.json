@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "position": "Computer Science & Engineering",
+    "companyName":
+      "Studied Computer Science & Engineering at Royal University of Phnom Penh(RUPP)",
+    "date": "2019-2023"
+  },
+  {
+    "id": 2,
+    "position": "High school",
+    "companyName": "Studied at Tameang high school",
+    "date": "2013-2019"
+  }
+]
