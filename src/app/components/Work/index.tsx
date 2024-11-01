@@ -124,7 +124,6 @@ const Works = () => {
                       category={work.category}
                       image={work.image}
                       href={work.href}
-                      onClick={() => setOpen(true)}
                     />
                   );
                 }
@@ -133,7 +132,6 @@ const Works = () => {
             </Box>
           </CustomTabPanel>
         </Box>
-        <MyDialog open={open} onClose={handleClose}/>
       </SectionComponent>
     </Box>
   );
