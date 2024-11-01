@@ -14,9 +14,9 @@ interface MyCardProps {
 
 const WorkCard = ({ title, image, category, href, onClick }: MyCardProps) => {
   return (
-    <Box 
-      // target="_blank" 
-      // href={href} 
+    <Link 
+      target="_blank" 
+      href={href} 
       className="
         bg-cardBG
         dark:bg-slate-600 
@@ -36,7 +36,7 @@ const WorkCard = ({ title, image, category, href, onClick }: MyCardProps) => {
           height={450}
           priority
           unoptimized
-          className="h-[150px] w-full object-cover rounded-t-[8px]"
+          className="h-[150px] w-full object-cover object-top rounded-t-[8px]"
         />
         <Box className="p-2 rounded-b-[8px]">
           <Typography gutterBottom variant="body2" component="div" className="dark:text-slate-400">
@@ -46,7 +46,7 @@ const WorkCard = ({ title, image, category, href, onClick }: MyCardProps) => {
             {title}
           </Typography>
         </Box>
-    </Box>
+    </Link>
   );
 };
 

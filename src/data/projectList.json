@@ -1,31 +1,24 @@
 [
+ 
   {
     "id": 1,
-    "image": "/images/ui.jpg",
-    "title": "Family Registration Figma",
-    "category": "Design",
-    "href": ""
-  },
-  {
-    "id": 2,
     "image": "/images/landing.jpg",
     "title": "Family Registration Landing Page",
     "category": "Web Development",
     "href": ""
   },
   {
-    "id": 3,
-    "image": "/images/admin.jpg",
-    "title": "Family Registration Back office",
+    "id": 2,
+    "image": "/images/e-commerce-back-office.png",
+    "title": "E-commerce admin",
     "category": "Web Development",
-    "href": ""
+    "href": "https://github.com/staticLulu/ecommerce-admin"
   },
-
   {
-    "id": 4,
-    "image": "/images/e-commerce.jpg",
-    "title": "E-commerce",
+    "id": 3,
+    "image": "/images/e-commerce.png",
+    "title": "E-commerce front",
     "category": "Web Development",
-    "href": ""
+    "href": "https://github.com/staticLulu/ecommerce-frontend"
   }
 ]
