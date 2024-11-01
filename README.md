@@ -32,13 +32,6 @@ To set up and run this project locally:
 
     npm run dev
 
-<<<<<<< HEAD
-=======
-## Usage
-
-Once the development server is running, open your browser and go to `http://localhost:3000` to view your portfolio.
-
->>>>>>> 5dd5cc48f94952ac08c02f4880bba82f8b46e398
 ## Contact
 
 For any inquiries or feedback, feel free to reach out to me at [dangmakara01@gmail.com](https://mail.google.com/mail/?view=cm&fs=1&to=dangmakara01@gmail.com).
