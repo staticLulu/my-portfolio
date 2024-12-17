@@ -2,10 +2,10 @@
  
   {
     "id": 1,
-    "image": "/images/landing.jpg",
-    "title": "Family Registration Landing Page",
+    "image": "/images/frispes-landing-page.png",
+    "title": "Frispes Landing Page",
     "category": "Web Development",
-    "href": ""
+    "href": "https://frispes-pwa-landing-page.vercel.app/en"
   },
   {
     "id": 2,

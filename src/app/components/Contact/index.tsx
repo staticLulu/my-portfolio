@@ -46,7 +46,7 @@ const Contact = () => {
             }
           >
             <Typography className='font-medium dark:text-slate-400'>
-              +855 896 614 712
+              +85589 614 712
             </Typography>
           </SectionCard>
           <SectionCard
