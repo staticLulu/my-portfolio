@@ -27,7 +27,10 @@ const ProfileSection = () => {
   
   const resumeClick = (e: any) => {
     e.preventDefault();
-    downloadPDF({ url: "/resources/Resume_Dang_Makara.pdf", filename: "Resume_Dang_Makara.pdf" });
+    downloadPDF({ 
+      url: "/resources/CURRICULUM-VITAE(Senior Frontend Developer).pdf", 
+      filename: "CURRICULUM-VITAE(Senior Frontend Developer).pdf" 
+    });
   };
   
 
