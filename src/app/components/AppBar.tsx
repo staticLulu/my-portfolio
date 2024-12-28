@@ -138,7 +138,7 @@ const AppBar = () => {
       '
     >
       {/* <LuCodeXml size={50} className='dark:text-white cursor-pointer' onClick={() => router.push('/')} /> */}
-      <Typography className='dark:text-white cursor-pointer'>DangMakara</Typography>
+      <Typography className='dark:text-white cursor-pointer text-3xl font-semibold'>DangMakara</Typography>
       <Box className="flex items-center gap-4">
         <MdOutlineMenu 
           size={40} 
