@@ -10,5 +10,9 @@
   { "id": 8, "title": "Sass" },
   { "id": 9, "title": "Firebase" },
   { "id": 10, "title": "Axios" },
-  { "id": 11, "title": "Git" }
+  { "id": 11, "title": "Git" },
+  { "id": 12, "title": "Vue js" },
+  { "id": 13, "title": "Angular" },
+  { "id": 11, "title": "GitLab" },
+  { "id": 11, "title": "GitHub" }
 ]

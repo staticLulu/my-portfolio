@@ -2,7 +2,6 @@
 
 import { Avatar, Box, Drawer, Typography } from "@mui/material";
 import ThemeToggle from "./ThemeToggle";
-import { LuCode2 } from "react-icons/lu";
 import { MdOutlineMenu } from "react-icons/md";
 import { useEffect, useState } from "react";
 import { useRouter, usePathname } from 'next/navigation';
@@ -138,7 +137,8 @@ const AppBar = () => {
         p-4
       '
     >
-      <LuCode2 size={50} className='dark:text-white cursor-pointer' onClick={() => router.push('/')} />
+      {/* <LuCodeXml size={50} className='dark:text-white cursor-pointer' onClick={() => router.push('/')} /> */}
+      <Typography className='dark:text-white cursor-pointer text-3xl font-semibold'>DangMakara</Typography>
       <Box className="flex items-center gap-4">
         <MdOutlineMenu 
           size={40} 
