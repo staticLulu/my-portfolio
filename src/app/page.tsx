@@ -1,15 +1,17 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { ElementType, useEffect, useState } from "react";
 import { Box, Button } from "@mui/material";
 import ProfileSection from "./components/ProfileSection";
 import TabComponents from "./components/TabComponents";
 import HomeComponent from './components/Home';
-import { Element as ScrollElement } from "react-scroll"; // Scroll element
 import Resume from './components/Resume';
 import Works from './components/Work';
 import Contact from './components/Contact';
 import { BiArrowToTop } from 'react-icons/bi';
+import { Link as _ReactScrollLink, scroller } from "react-scroll";
+
+const ReactScrollLink = _ReactScrollLink as ElementType;
 
 const Home = () => {
   const [showScrollToTop, setShowScrollToTop] = useState(false);
@@ -49,18 +51,18 @@ const Home = () => {
       </Box>
 
       <Box className="block md:hidden">
-        <ScrollElement name="home" id="home">
+        <ReactScrollLink name="home" id="home">
           <HomeComponent />
-        </ScrollElement>
-        <ScrollElement name="resume" id="resume">
+        </ReactScrollLink>
+        <ReactScrollLink name="resume" id="resume">
           <Resume />
-        </ScrollElement>
-        <ScrollElement name="works" id="works">
+        </ReactScrollLink>
+        <ReactScrollLink name="works" id="works">
           <Works />
-        </ScrollElement>
-        <ScrollElement name="contact" id="contact">
+        </ReactScrollLink>
+        <ReactScrollLink name="contact" id="contact">
           <Contact />
-        </ScrollElement>
+        </ReactScrollLink>
 
         {showScrollToTop && (
           <Button 
