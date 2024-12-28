@@ -3,11 +3,14 @@
 import { Avatar, Box, Drawer, Typography } from "@mui/material";
 import ThemeToggle from "./ThemeToggle";
 import { MdOutlineMenu } from "react-icons/md";
-import { useEffect, useState } from "react";
+import { ElementType, useEffect, useState } from "react";
 import { useRouter, usePathname } from 'next/navigation';
-import { Link as ScrollLink } from "react-scroll"; 
+import { Link as _ReactScrollLink, scroller } from "react-scroll";
 import appBarItems from "@/data/appBarItems.json";
 import { AppBarIconMapping } from '../lib/iconMapping';
+
+
+const ReactScrollLink = _ReactScrollLink as ElementType;
 
 const AppBar = () => {
   const router = useRouter();
@@ -56,7 +59,7 @@ const AppBar = () => {
           <Box key={index} className="py-3 cursor-pointer">
             {pathname === "/" && item.href.startsWith("#") ? (
               // Use ScrollLink for internal scroll items
-              <ScrollLink
+              <ReactScrollLink
                 to={item.href.substring(1)} // Remove '#' and pass the ID to react-scroll
                 smooth={true}
                 duration={500}
@@ -88,7 +91,7 @@ const AppBar = () => {
                     {item.title}
                   </Typography>
                 </Box>
-              </ScrollLink>
+              </ReactScrollLink>
             ) : (
               // Use regular click for external or non-scroll items
               <Box
