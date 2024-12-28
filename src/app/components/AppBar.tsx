@@ -9,7 +9,6 @@ import { Link as _ReactScrollLink, scroller } from "react-scroll";
 import appBarItems from "@/data/appBarItems.json";
 import { AppBarIconMapping } from '../lib/iconMapping';
 
-
 const ReactScrollLink = _ReactScrollLink as ElementType;
 
 const AppBar = () => {
