@@ -19,5 +19,12 @@
     "title": "E-commerce front",
     "category": "Web Development",
     "href": "https://github.com/staticLulu/ecommerce-frontend"
+  },
+  {
+    "id": 4,
+    "image": "/images/vue1.png",
+    "title": "Rocket landing page",
+    "category": "Web Development",
+    "href": "https://rocket-landing-page.vercel.app/"
   }
 ]
